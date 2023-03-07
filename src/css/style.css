@@ -8,7 +8,7 @@
   font-display: block;
   font-style: normal;
   font-named-instance: "Regular";
-  src: url(/fonts/Inter-roman.var.woff2) format("woff2")
+  src: url(/webfonts/Inter-roman.var.woff2) format("woff2")
 }
 
 @font-face {
@@ -17,5 +17,5 @@
   font-display: block;
   font-style: italic;
   font-named-instance: "Italic";
-  src: url(/fonts/Inter-italic.var.woff2) format("woff2")
+  src: url(/webfonts/Inter-italic.var.woff2) format("woff2")
 }

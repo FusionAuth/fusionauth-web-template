@@ -40,6 +40,11 @@ title = frontmatter.title ? frontmatter.title : title
   <meta name="viewport" content="width=device-width"/>
   <!-- TODO: Implement favicons by following this blog post https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7 -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="stylesheet" href="/css/fontawesome.min.css"/>
+  <link rel="stylesheet" href="/css/brands.min.css"/>
+  <link rel="stylesheet" href="/css/duotone.min.css"/>
+  <link rel="stylesheet" href="/css/light.min.css"/>
+  <link rel="stylesheet" href="/css/regular.min.css"/>
   <script src="/js/ThemeSelector.js" type="text/javascript"></script>
   <title>{title}</title>
 </head>
@@ -47,74 +52,110 @@ title = frontmatter.title ? frontmatter.title : title
   <!-- Header w/ border on bottom, full width and is sticky -->
   <div class="backdrop-blur border-b border-slate-900/10 sticky top-0 z-40 w-full dark:border-slate-100/10">
     <!-- Header content -->
-    <div class="flex items-center max-w-8xl mx-auto p-4">
+    <div class="flex items-center max-w-8xl mx-auto px-4 py-3">
       <!-- Logo -->
       <a href="/">
         <img src="/img/logo-dark.svg" alt="Logo" class="dark:hidden"/>
         <img src="/img/logo-light.svg" alt="Logo" class="hidden dark:inline"/>
       </a>
 
-      <!-- Header nav -->
-      <nav class="ml-auto">
-        <ul class="flex items-center">
-          <li class="font-semibold pl-3 text-sm hover:text-indigo-600 dark:hover:text-indigo-400"><a href="#">Item 1</a></li>
-          <li class="font-semibold pl-3 text-sm hover:text-indigo-600 dark:hover:text-indigo-400"><a href="#">Item 1</a></li>
-          <li class="font-semibold pl-3 text-sm hover:text-indigo-600 dark:hover:text-indigo-400"><a href="#">Item 1</a></li>
+      <nav id="header-nav" class="absolute bg-white h-screen left-0 right-0 top-0 p-6 dark:bg-slate-900 lg:flex lg:h-auto lg:items-center lg:ml-auto lg:p-0 lg:static">
+        <!-- Mobile close button -->
+        <button type="button" class="absolute ml-6 right-5 top-5 lg:hidden" data-widget="hidden-nav-close-button">
+          <i class="fa-regular fa-x text-lg"></i>
+        </button>
+
+        <!-- Header nav -->
+        <ul class="space-y-6 lg:flex lg:items-center lg:space-y-0">
+          <li class="font-semibold text-lg hover:text-indigo-600 dark:hover:text-indigo-400 lg:pl-3 lg:text-sm"><a href="#">Item 1</a></li>
+          <li class="font-semibold text-lg hover:text-indigo-600 dark:hover:text-indigo-400 lg:pl-3 lg:text-sm"><a href="#">Item 1</a></li>
+          <li class="font-semibold text-lg hover:text-indigo-600 dark:hover:text-indigo-400 lg:pl-3 lg:text-sm"><a href="#">Item 1</a></li>
         </ul>
+
+        <!-- Theme selector and Github link -->
+        <div class="border-t border-slate-900/10 mt-6 pt-6 relative dark:border-slate-100/10 lg:border-t-0 lg:border-l lg:flex lg:items-center lg:ml-6 lg:pl-6 lg:mt-0 lg:pt-0">
+          <div data-widget="theme-selector">
+            <button type="button" class="hidden lg:inline">
+              <span class="dark:hidden">
+                <i class="fa-light fa-sun-bright text-indigo-600 text-lg"></i>
+              </span>
+              <span class="hidden dark:inline">
+                <i class="fa-light fa-moon text-indigo-400 text-lg"></i>
+              </span>
+            </button>
+
+            <!-- Theme dropdown menu -->
+            <ul class="absolute bg-white border border-slate-900/10 hidden rounded-md shadow-lg right-0 top-12 w-36 dark:bg-slate-900 dark:border-slate-100/10 dark:text-slate-200">
+              <li data-hover-class="bg-slate-100 dark:bg-slate-800">
+                <button type="button" class="flex font-medium group items-center px-2 py-1 text-sm w-full" data-theme="light" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-900 dark:text-indigo-200">
+                  <i class="fa-light fa-sun-bright fa-fw mr-3 text-lg text-slate-500" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-500"></i>
+                  Light
+                </button>
+              </li>
+              <li data-hover-class="bg-slate-100 dark:bg-slate-800">
+                <button type="button" class="flex font-medium group items-center px-2 py-1 text-sm w-full" data-theme="dark" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-900 dark:text-indigo-200">
+                  <i class="fa-light fa-moon fa-fw mr-3 text-lg text-slate-500" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-500"></i>
+                  Dark
+                </button>
+              </li>
+              <li data-hover-class="bg-slate-100 dark:bg-slate-800">
+                <button type="button" class="flex font-medium group items-center px-2 py-1 text-sm w-full" data-theme="system" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-900 dark:text-indigo-200">
+                  <i class="fa-light fa-computer-classic fa-fw mr-3 text-lg text-slate-500" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-500"></i>
+                  System
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://github.com/fusionauth/fusionauth-issues" class="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">
+            <span class="sr-only">GitHub</span>
+            <i class="fa-brands fa-github text-lg"></i>
+          </a>
+        </div>
       </nav>
 
-      <!-- Theme selector and Github link -->
-      <div class="border-l border-slate-900/10 flex items-center ml-6 relative pl-6 dark:border-slate-100/10">
-        <div data-widget="theme-selector">
-          <button type="button" aria-haspopup="true" aria-expanded="false">
-            <span class="dark:hidden">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-indigo-400/20 stroke-indigo-600"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-indigo-600"></path></svg>
-            </span>
-            <span class="hidden dark:inline">
-              <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="fill-indigo-400/20 dark:fill-indigo-200/20"></path><path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-indigo-600 dark:fill-indigo-400"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-indigo-600 dark:fill-indigo-400"></path></svg>
-            </span>
-          </button>
+      <!-- Mobile search button -->
+      <button type="button" class="ml-auto lg:hidden" data-widget="mobile-search-button">
+        <i class="fa-regular fa-magnifying-glass text-lg"></i>
+      </button>
 
-          <!-- Theme dropdown menu -->
-          <ul class="absolute bg-white border border-slate-900/10 hidden rounded-md shadow-lg right-0 top-12 w-36 dark:bg-slate-900 dark:border-slate-100/10 dark:text-slate-200">
-            <li data-hover-class="bg-slate-100 dark:bg-slate-800">
-              <button class="flex font-medium group items-center px-2 py-1 text-sm w-full" data-theme="light" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-900 dark:text-indigo-200">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 mr-3 w-6"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="stroke-slate-500" data-active-class="stroke-indigo-600" data-inactive-class="stroke-slate-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-slate-500" data-active-class="stroke-indigo-600" data-inactive-class="stroke-slate-500"></path></svg>
-                Light
-              </button>
-            </li>
-            <li data-hover-class="bg-slate-100 dark:bg-slate-800">
-              <button class="flex font-medium group items-center px-2 py-1 text-sm w-full" data-theme="dark" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-900 dark:text-indigo-200">
-                <svg viewBox="0 0 24 24" fill="none" class="h-6 mr-3 w-6"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="stroke-slate-500" data-active-class="stroke-indigo-600" data-inactive-class="stroke-slate-500"></path><path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-slate-500" data-active-class="fill-indigo-600" data-inactive-class="fill-slate-500"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-slate-500" data-active-class="fill-indigo-600" data-inactive-class="fill-slate-500"></path></svg>
-                Dark
-              </button>
-            </li>
-            <li data-hover-class="bg-slate-100 dark:bg-slate-800">
-              <button class="flex font-medium group items-center px-2 py-1 text-sm w-full" data-theme="system" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-900 dark:text-indigo-200">
-                <svg viewBox="0 0 24 24" fill="none" class="h-6 mr-3 w-6"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Z" stroke-width="2" stroke-linejoin="round" class="stroke-slate-500" data-active-class="stroke-indigo-600" data-inactive-class="stroke-slate-500"></path><path d="M14 15c0 3 2 5 2 5H8s2-2 2-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-slate-500" data-active-class="stroke-indigo-600" data-inactive-class="stroke-slate-500"></path></svg>
-                System
-              </button>
-            </li>
-          </ul>
-        </div>
+      <!-- Mobile nav button (data attributes control the nav to open) -->
+      <button type="button" class="ml-6 lg:hidden" data-widget="hidden-nav-button" data-nav="header-nav">
+        <i class="fa-regular fa-ellipsis-vertical text-lg"></i>
+      </button>
+    </div>
 
-        <a href="https://github.com/fusionauth/fusionauth-issues" class="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">
-          <span class="sr-only">GitHub</span>
-          <svg viewBox="0 0 16 16" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-        </a>
+    <!-- Mobile nav button (data attributes control the nav to open) -->
+    <div class="bg-white px-4 pb-2 dark:bg-slate-900 lg:hidden" data-widget="hidden-nav-button" data-nav="side-nav">
+      <!-- Divider with a nasty padding hack (including the pb-2 above) -->
+      <div class="border-b border-slate-900/10 mb-2 dark:border-slate-100/10"></div>
+      <div class="flex items-center">
+        <button type="button"class="lg:hidden" data-widget="mobile-nav-close-button">
+          <i class="fa-regular fa-bars text-lg"></i>
+        </button>
+        <span class="ml-6 text-sm text-slate-500">
+          <span>Breadcrumbs</span>
+          <i class="fa-regular fa-angle-right mx-1 text-sm"></i>
+          <span class="font-semibold text-slate-700">Item</span>
+        </span>
       </div>
     </div>
   </div>
 
   <main class="max-w-8xl mx-auto px-4 py-8">
     <!-- Left sidebar -->
-    <div class="bottom-0 fixed left-[max(0px,calc(50%-45rem))] overflow-y-auto pb-10 px-4 right-auto top-[3.9rem] w-[19rem]">
+    <div id="side-nav" class="bg-white bottom-0 fixed hidden left-0 overflow-y-auto pb-10 pt-[5rem] px-4 right-0 top-0 dark:bg-slate-900 lg:block lg:left-[max(0px,calc(50%-45rem))] lg:pt-0 lg:right-auto lg:top-[3.85rem] lg:w-[19rem]">
       <!-- Relative container for the sticky search -->
       <div class="relative">
+        <!-- Mobile close button -->
+        <button type="button" class="absolute ml-6 right-1 top-0 lg:hidden" data-widget="hidden-nav-close-button">
+          <i class="fa-regular fa-x text-lg"></i>
+        </button>
+
         <!-- Search button -->
-        <div class="bg-white pb-6 pt-8 sticky top-0 dark:bg-slate-900">
+        <div class="bg-white hidden pb-6 pt-8 sticky top-0 z-40 dark:bg-slate-900 lg:block">
           <button type="button" id="search" class="flex items-center pl-2 pr-3 py-1.5 ring-1 ring-slate-900/10 rounded-md shadow-sm text-slate-400 text-sm w-full dark:bg-slate-800 dark:highlight-white/5 dark:hover:bg-slate-700 hover:ring-slate-300">
-            <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-3"><path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle></svg>
+            <i class="fa-light fa-magnifying-glass mr-3"></i>
             <span>Search...</span>
             <span class="font-semibold ml-auto pl-3 text-xs">⌘K</span>
           </button>
@@ -125,20 +166,16 @@ title = frontmatter.title ? frontmatter.title : title
           <ul class="space-y-4">
             <li>
               <!-- Active example -->
-              <a href="#" class="flex font-semibold items-center group text-sm text-indigo-600 dark:text-indigo-400">
-                <div class="mr-4 ring-1 ring-slate-900/5 rounded-md shadow-sm dark:bg-slate-800 dark:ring-0 dark:shadow-none dark:group-hover:bg-indigo-400 dark:group-hover:shadow-none dark:group-hover:text-indigo-400 group-hover:ring-slate-900/10 group-hover:shadow group-hover:shadow-indigo-200">
-                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 7c1.093 0 2.117.27 3 .743V17a6.345 6.345 0 0 0-3-.743c-1.093 0-2.617.27-3.5.743V7.743C5.883 7.27 7.407 7 8.5 7Z" class="fill-indigo-200 group-hover:fill-indigo-600 dark:fill-indigo-300 dark:group-hover:fill-indigo-300"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 7c1.093 0 2.617.27 3.5.743V17c-.883-.473-2.407-.743-3.5-.743s-2.117.27-3 .743V7.743a6.344 6.344 0 0 1 3-.743Z" class="fill-indigo-400 group-hover:fill-indigo-600 dark:fill-indigo-200 dark:group-hover:fill-indigo-200"></path></svg>
-                </div>
-                Section
+              <a href="#" class="flex font-semibold group items-center text-sm">
+                <i class="fa-duotone fa-book-open h-6 mr-4 ring-1 ring-slate-900/5 pt-[4px] rounded-md shadow-sm text-center text-indigo-400 text-xs w-6 dark:bg-slate-800 dark:ring-0 dark:shadow-none dark:group-hover:bg-indigo-400 dark:group-hover:shadow-none dark:group-hover:text-indigo-600 group-hover:ring-slate-900/10 group-hover:shadow group-hover:shadow-indigo-200 group-hover:text-indigo-600"></i>
+                <span class="text-indigo-600 dark:text-indigo-400">Section</span>
               </a>
             </li>
             {([...Array(6)].map(() =>
               <li>
-                <a href="#" class="flex font-medium items-center group text-sm hover:text-indigo-600 dark:hover:text-indigo-400">
-                  <div class="mr-4 ring-1 ring-slate-900/5 rounded-md shadow-sm dark:bg-slate-800 dark:ring-0 dark:shadow-none dark:group-hover:bg-indigo-400 dark:group-hover:shadow-none dark:group-hover:text-indigo-400 group-hover:ring-slate-900/10 group-hover:shadow group-hover:shadow-indigo-200">
-                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 7c1.093 0 2.117.27 3 .743V17a6.345 6.345 0 0 0-3-.743c-1.093 0-2.617.27-3.5.743V7.743C5.883 7.27 7.407 7 8.5 7Z" class="fill-indigo-200 group-hover:fill-indigo-600 dark:fill-indigo-300 dark:group-hover:fill-indigo-300"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 7c1.093 0 2.617.27 3.5.743V17c-.883-.473-2.407-.743-3.5-.743s-2.117.27-3 .743V7.743a6.344 6.344 0 0 1 3-.743Z" class="fill-indigo-400 group-hover:fill-indigo-600 dark:fill-indigo-200 dark:group-hover:fill-indigo-200"></path></svg>
-                  </div>
-                  Section
+                <a href="#" class="flex font-medium items-center group text-sm">
+                  <i class="fa-duotone fa-book-open h-6 mr-4 ring-1 ring-slate-900/5 pt-[4px] rounded-md shadow-sm text-center text-indigo-400 text-xs w-6 dark:bg-slate-800 dark:ring-0 dark:shadow-none dark:group-hover:bg-indigo-400 dark:group-hover:shadow-none dark:group-hover:text-indigo-600 group-hover:ring-slate-900/10 group-hover:shadow group-hover:shadow-indigo-200 group-hover:text-indigo-600"></i>
+                  <span class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Section</span>
                 </a>
               </li>
             ))}
@@ -170,35 +207,85 @@ title = frontmatter.title ? frontmatter.title : title
     </div>
 
     <!-- Main content section -->
-    <article class="max-w-none prose prose-slate px-[19rem] dark:prose-invert dark:prose-headings:text-indigo-400 prose-headings:scroll-mt-10 prose-headings:text-indigo-600">
+    <article class="max-w-none prose prose-slate dark:prose-invert dark:prose-headings:text-indigo-400 lg:px-[19rem] prose-headings:scroll-mt-10 prose-headings:text-indigo-600">
       <h1 class="text-lg">{title}</h1>
       <slot/>
     </article>
 
-    <aside class="bottom-0 fixed left-auto overflow-y-auto pb-10 pt-8 px-4 right-[max(0px,calc(50%-45rem))] top-[3.5rem] w-[19rem]">
+    <aside class="bottom-0 fixed hidden left-auto overflow-y-auto pb-10 pt-8 px-4 right-[max(0px,calc(50%-45rem))] top-[3.5rem] w-[19rem] lg:block">
       <nav>
         <ul>
           <!-- Active example -->
           <li>
             <a href="#" class="block font-medium pb-2 text-indigo-600 text-sm dark:text-indigo-400">TOC Section</a>
             <ul class="pb-2 space-y-3">
-              <li><a href="#" class="flex group items-center pl-4 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900"><svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg> Item 1</a></li>
-              <li><a href="#" class="flex group items-center pl-4 text-indigo-600 text-sm dark:text-indigo-400"><svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg> Item 1</a></li>
+              <li>
+                <a href="#" class="flex items-center pl-4 text-slate-600 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900">
+                  <i class="fa-regular fa-angle-right mr-2 text-xs"></i>
+                  Item 1
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex group items-center pl-4 text-indigo-600 text-sm dark:text-indigo-400">
+                  <i class="fa-regular fa-angle-right mr-2 text-xs"></i>
+                  Item 1
+                </a>
+              </li>
             </ul>
           </li>
 
           {([...Array(20)].map(() =>
             <li>
-              <a href="#" class="block font-medium pb-2 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900">TOC Section</a>
+              <a href="#" class="block font-medium pb-2 text-slate-600 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900">TOC Section</a>
               <ul class="pb-2 space-y-3">
-                <li><a href="#" class="flex group items-center pl-4 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900"><svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg> Item 1</a></li>
-                <li><a href="#" class="flex group items-center pl-4 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900"><svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg> Item 1</a></li>
-                <li><a href="#" class="flex group items-center pl-4 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900"><svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg> Item 1</a></li>
-                <li><a href="#" class="flex group items-center pl-4 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900"><svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg> Item 1</a></li>
-                <li><a href="#" class="flex group items-center pl-4 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900"><svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg> Item 1</a></li>
-                <li><a href="#" class="flex group items-center pl-4 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900"><svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg> Item 1</a></li>
-                <li><a href="#" class="flex group items-center pl-4 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900"><svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg> Item 1</a></li>
-                <li><a href="#" class="flex group items-center pl-4 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900"><svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg> Item 1</a></li>
+                <li>
+                  <a href="#" class="flex group items-center pl-4 text-slate-600 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900">
+                    <i class="fa-regular fa-angle-right mr-2 text-xs"></i>
+                    Item 1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex group items-center pl-4 text-slate-600 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900">
+                    <i class="fa-regular fa-angle-right mr-2 text-xs"></i>
+                    Item 1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex group items-center pl-4 text-slate-600 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900">
+                    <i class="fa-regular fa-angle-right mr-2 text-xs"></i>
+                    Item 1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex group items-center pl-4 text-slate-600 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900">
+                    <i class="fa-regular fa-angle-right mr-2 text-xs"></i>
+                    Item 1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex group items-center pl-4 text-slate-600 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900">
+                    <i class="fa-regular fa-angle-right mr-2 text-xs"></i>
+                    Item 1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex group items-center pl-4 text-slate-600 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900">
+                    <i class="fa-regular fa-angle-right mr-2 text-xs"></i>
+                    Item 1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex group items-center pl-4 text-slate-600 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900">
+                    <i class="fa-regular fa-angle-right mr-2 text-xs"></i>
+                    Item 1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex group items-center pl-4 text-slate-600 text-sm dark:text-slate-400 dark:hover:text-slate-100 hover:text-slate-900">
+                    <i class="fa-regular fa-angle-right mr-2 text-xs"></i>
+                    Item 1
+                  </a>
+                </li>
               </ul>
             </li>
           ))}
