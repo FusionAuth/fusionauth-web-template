@@ -45,7 +45,8 @@ title = frontmatter.title ? frontmatter.title : title
   <link rel="stylesheet" href="/css/duotone.min.css"/>
   <link rel="stylesheet" href="/css/light.min.css"/>
   <link rel="stylesheet" href="/css/regular.min.css"/>
-  <script src="/js/ThemeSelector.js" type="text/javascript"></script>
+  <script src="/js/ThemeSelector.0.1.0.js" type="text/javascript"></script>
+  <script src="/js/Visibility.0.1.0.js" type="text/javascript"></script>
   <title>{title}</title>
 </head>
 <body class="bg-white text-slate-700 dark:bg-slate-900 dark:text-slate-200">
@@ -59,9 +60,9 @@ title = frontmatter.title ? frontmatter.title : title
         <img src="/img/logo-light.svg" alt="Logo" class="hidden dark:inline"/>
       </a>
 
-      <nav id="header-nav" class="absolute bg-white h-screen left-0 right-0 top-0 p-6 dark:bg-slate-900 lg:flex lg:h-auto lg:items-center lg:ml-auto lg:p-0 lg:static">
+      <nav id="header-nav" class="absolute bg-white h-screen hidden left-0 right-0 top-0 p-6 dark:bg-slate-900 lg:flex lg:h-auto lg:items-center lg:ml-auto lg:p-0 lg:static">
         <!-- Mobile close button -->
-        <button type="button" class="absolute ml-6 right-5 top-5 lg:hidden" data-widget="hidden-nav-close-button">
+        <button type="button" class="absolute ml-6 right-5 top-5 lg:hidden" data-widget="visibility-button" data-element="header-nav">
           <i class="fa-regular fa-x text-lg"></i>
         </button>
 
@@ -74,18 +75,19 @@ title = frontmatter.title ? frontmatter.title : title
 
         <!-- Theme selector and Github link -->
         <div class="border-t border-slate-900/10 mt-6 pt-6 relative dark:border-slate-100/10 lg:border-t-0 lg:border-l lg:flex lg:items-center lg:ml-6 lg:pl-6 lg:mt-0 lg:pt-0">
-          <div data-widget="theme-selector">
-            <button type="button" class="hidden lg:inline">
+          <div data-widget="theme-selector" class="relative">
+            <button type="button" class="flex items-center border border-slate-500 mt-5 rounded-lg p-2 text-slate-500 w-48 hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-300 lg:border-0 lg:ml-6 lg:mt-0 lg:p-0 lg:text-slate-400 lg:w-auto lg:dark:hover:bg-transparent lg:hover:bg-transparent">
               <span class="dark:hidden">
-                <i class="fa-light fa-sun-bright text-indigo-600 text-lg"></i>
+                <i class="fa-light fa-sun-bright fa-fw text-indigo-600 text-lg"></i>
               </span>
               <span class="hidden dark:inline">
-                <i class="fa-light fa-moon text-indigo-400 text-lg"></i>
+                <i class="fa-light fa-moon fa-fw text-indigo-400 text-lg"></i>
               </span>
+              <span class="ml-2 lg:hidden">Change theme</span>
             </button>
 
             <!-- Theme dropdown menu -->
-            <ul class="absolute bg-white border border-slate-900/10 hidden rounded-md shadow-lg right-0 top-12 w-36 dark:bg-slate-900 dark:border-slate-100/10 dark:text-slate-200">
+            <ul class="absolute bg-white border border-slate-900/10 hidden rounded-md shadow-lg left-0 top-12 w-36 dark:bg-slate-900 dark:border-slate-100/10 dark:text-slate-200 lg:left-auto lg:right-0">
               <li data-hover-class="bg-slate-100 dark:bg-slate-800">
                 <button type="button" class="flex font-medium group items-center px-2 py-1 text-sm w-full" data-theme="light" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-900 dark:text-indigo-200">
                   <i class="fa-light fa-sun-bright fa-fw mr-3 text-lg text-slate-500" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-500"></i>
@@ -107,9 +109,9 @@ title = frontmatter.title ? frontmatter.title : title
             </ul>
           </div>
 
-          <a href="https://github.com/fusionauth/fusionauth-issues" class="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">
-            <span class="sr-only">GitHub</span>
-            <i class="fa-brands fa-github text-lg"></i>
+          <a href="https://github.com/fusionauth/fusionauth-issues" class="flex items-center border border-slate-500 mt-5 rounded-lg p-2 text-slate-500 w-48 hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-300 lg:border-0 lg:ml-6 lg:mt-0 lg:p-0 lg:text-slate-400 lg:w-auto lg:dark:hover:bg-transparent lg:hover:bg-transparent">
+            <i class="fa-brands fa-github fa-fw text-lg"></i>
+            <span class="ml-2 lg:hidden">GitHub</span>
           </a>
         </div>
       </nav>
@@ -120,17 +122,17 @@ title = frontmatter.title ? frontmatter.title : title
       </button>
 
       <!-- Mobile nav button (data attributes control the nav to open) -->
-      <button type="button" class="ml-6 lg:hidden" data-widget="hidden-nav-button" data-nav="header-nav">
+      <button type="button" class="ml-6 lg:hidden" data-widget="visibility-button" data-element="header-nav">
         <i class="fa-regular fa-ellipsis-vertical text-lg"></i>
       </button>
     </div>
 
     <!-- Mobile nav button (data attributes control the nav to open) -->
-    <div class="bg-white px-4 pb-2 dark:bg-slate-900 lg:hidden" data-widget="hidden-nav-button" data-nav="side-nav">
+    <div class="bg-white px-4 pb-2 dark:bg-slate-900 lg:hidden" data-widget="visibility-button" data-element="side-nav">
       <!-- Divider with a nasty padding hack (including the pb-2 above) -->
       <div class="border-b border-slate-900/10 mb-2 dark:border-slate-100/10"></div>
       <div class="flex items-center">
-        <button type="button"class="lg:hidden" data-widget="mobile-nav-close-button">
+        <button type="button" data-widget="visibility-button" data-element="side-nav">
           <i class="fa-regular fa-bars text-lg"></i>
         </button>
         <span class="ml-6 text-sm text-slate-500">
@@ -144,11 +146,11 @@ title = frontmatter.title ? frontmatter.title : title
 
   <main class="max-w-8xl mx-auto px-4 py-8">
     <!-- Left sidebar -->
-    <div id="side-nav" class="bg-white bottom-0 fixed hidden left-0 overflow-y-auto pb-10 pt-[5rem] px-4 right-0 top-0 dark:bg-slate-900 lg:block lg:left-[max(0px,calc(50%-45rem))] lg:pt-0 lg:right-auto lg:top-[3.85rem] lg:w-[19rem]">
+    <div id="side-nav" class="bg-white bottom-0 fixed hidden left-0 overflow-y-auto pb-10 pt-4 px-4 right-0 top-0 z-40 dark:bg-slate-900 lg:block lg:left-[max(0px,calc(50%-45rem))] lg:pt-0 lg:right-auto lg:top-[3.85rem] lg:w-[19rem]">
       <!-- Relative container for the sticky search -->
       <div class="relative">
         <!-- Mobile close button -->
-        <button type="button" class="absolute ml-6 right-1 top-0 lg:hidden" data-widget="hidden-nav-close-button">
+        <button type="button" class="absolute ml-6 right-1 top-0 lg:hidden" data-widget="visibility-button" data-element="side-nav">
           <i class="fa-regular fa-x text-lg"></i>
         </button>
 
