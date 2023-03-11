@@ -59,7 +59,7 @@ class ThemeSelector {
   }
 
   #handleKeyDown(event) {
-    if (!event.target.closest('[data-widget="theme-selector"]')) {
+    if (this.menu.classList.contains('hidden')) {
       return;
     }
 

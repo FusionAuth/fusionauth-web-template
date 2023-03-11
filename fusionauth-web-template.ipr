@@ -6,6 +6,9 @@
     </profile>
     <version value="1.0" />
   </component>
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{@algolia}" />
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/fusionauth-web-template.iml" filepath="$PROJECT_DIR$/fusionauth-web-template.iml" />

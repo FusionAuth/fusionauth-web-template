@@ -11,6 +11,7 @@
 	},
 	"dependencies": {
 		"@astrojs/tailwind": "^3.0.1",
+		"@docsearch/js": "^3.3.3",
 		"@docsearch/react": "^3.3.3",
 		"@tailwindcss/typography": "^0.5.9",
 		"astro": "^2.0.15",
