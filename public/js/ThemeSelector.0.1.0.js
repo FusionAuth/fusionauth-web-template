@@ -1,15 +1,19 @@
 'use strict';
 
 class ThemeSelector {
-  constructor() {
-    this.button = document.querySelector('[data-widget="theme-selector"] > button');
-    this.button.addEventListener('click', event => this.#handleMenu(event));
-    this.menu = document.querySelector('[data-widget="theme-selector"] > ul');
-    this.menu.addEventListener('mousemove', event => this.#handleMouseMove(event));
-    this.menu.querySelectorAll('button').forEach(button => button.addEventListener('click', event => this.#handleChange(event)))
+  #button;
+  #menu;
+  #theme;
 
-    this.theme = localStorage.getItem('theme') || 'system';
-    this.changeTheme(this.theme);
+  constructor() {
+    this.#button = document.querySelector('[data-widget="theme-selector"] > button');
+    this.#button.addEventListener('click', event => this.#handleMenu(event));
+    this.#menu = document.querySelector('[data-widget="theme-selector"] > ul');
+    this.#menu.addEventListener('mousemove', event => this.#handleMouseMove(event));
+    this.#menu.querySelectorAll('button').forEach(button => button.addEventListener('click', event => this.#handleChange(event)))
+
+    this.#theme = localStorage.getItem('theme') || 'system';
+    this.changeTheme(this.#theme);
     this.closeMenu();
 
     document.addEventListener('click', () => this.closeMenu());
@@ -23,22 +27,22 @@ class ThemeSelector {
       document.documentElement.classList.remove('dark');
     }
 
-    this.theme = theme;
+    this.#theme = theme;
     this.closeMenu();
     localStorage.setItem('theme', theme);
   }
 
   closeMenu() {
-    this.menu.classList.add('hidden');
+    this.#menu.classList.add('hidden');
   }
 
   openMenu() {
-    this.menu.classList.toggle('hidden');
-    this.menu.querySelectorAll('[data-inactive-class]').forEach(e => {
+    this.#menu.classList.toggle('hidden');
+    this.#menu.querySelectorAll('[data-inactive-class]').forEach(e => {
       e.classList.remove(...e.dataset.activeClass.split(' '));
       e.classList.add(...e.dataset.inactiveClass.split(' '));
     });
-    this.menu.querySelectorAll('[data-theme=' + this.theme + '] [data-active-class]').forEach(e => {
+    this.#menu.querySelectorAll('[data-theme=' + this.#theme + '] [data-active-class]').forEach(e => {
       e.classList.remove(...e.dataset.inactiveClass.split(' '));
       e.classList.add(...e.dataset.activeClass.split(' '));
       const button = e.closest('button');
@@ -48,7 +52,7 @@ class ThemeSelector {
   }
 
   #clearMenuItemBackgrounds() {
-    this.menu.querySelectorAll('li').forEach(e => {
+    this.#menu.querySelectorAll('li').forEach(e => {
       e.classList.remove(...e.dataset.hoverClass.split(' '), 'active');
     });
   }
@@ -59,7 +63,7 @@ class ThemeSelector {
   }
 
   #handleKeyDown(event) {
-    if (this.menu.classList.contains('hidden')) {
+    if (this.#menu.classList.contains('hidden')) {
       return;
     }
 
@@ -72,13 +76,13 @@ class ThemeSelector {
       event.stopPropagation();
       event.preventDefault();
 
-      if (this.menu.classList.contains('hidden')) {
+      if (this.#menu.classList.contains('hidden')) {
         this.openMenu();
       }
 
       this.#highlightSiblingMenuItem(event.key === 'ArrowDown');
     } else if (event.key === 'Enter') {
-      const button = this.menu.querySelector('ul:not(.hidden) li.active button');
+      const button = this.#menu.querySelector('ul:not(.hidden) li.active button');
       if (button) {
         this.changeTheme(button.dataset.theme);
         this.closeMenu();
@@ -111,11 +115,11 @@ class ThemeSelector {
 
   #highlightSiblingMenuItem(next) {
     console.log('Highlight');
-    let li = this.menu.querySelector('ul:not(.hidden) li.active');
+    let li = this.#menu.querySelector('ul:not(.hidden) li.active');
     if (li) {
       li = next ? li.nextElementSibling : li.previousElementSibling;
     } else {
-      li = this.menu.querySelector('ul:not(.hidden) li'); // First
+      li = this.#menu.querySelector('ul:not(.hidden) li'); // First
     }
 
     if (li) {
