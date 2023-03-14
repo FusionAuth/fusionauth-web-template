@@ -38,23 +38,6 @@ class ThemeSelector {
 
   openMenu() {
     this.#menu.classList.toggle('hidden');
-    this.#menu.querySelectorAll('[data-inactive-class]').forEach(e => {
-      e.classList.remove(...e.dataset.activeClass.split(' '));
-      e.classList.add(...e.dataset.inactiveClass.split(' '));
-    });
-    this.#menu.querySelectorAll('[data-theme=' + this.#theme + '] [data-active-class]').forEach(e => {
-      e.classList.remove(...e.dataset.inactiveClass.split(' '));
-      e.classList.add(...e.dataset.activeClass.split(' '));
-      const button = e.closest('button');
-      button.classList.remove(...button.dataset.inactiveClass.split(' '));
-      button.classList.add(...button.dataset.activeClass.split(' '));
-    });
-  }
-
-  #clearMenuItemBackgrounds() {
-    this.#menu.querySelectorAll('li').forEach(e => {
-      e.classList.remove(...e.dataset.hoverClass.split(' '), 'active');
-    });
   }
 
   #handleChange(event) {
@@ -102,19 +85,15 @@ class ThemeSelector {
       return;
     }
 
-    const classes = option.dataset.hoverClass.split(' ');
-    if (!classes.find(v => option.classList.contains(v))) {
-      this.#highlightMenuItem(option);
-    }
+    this.#highlightMenuItem(option);
   }
 
   #highlightMenuItem(option) {
-    this.#clearMenuItemBackgrounds();
-    option.classList.add(...option.dataset.hoverClass.split(' '), 'active');
+    this.#menu.querySelectorAll('li').forEach(e => e.classList.remove('active'));
+    option.classList.add('active');
   }
 
   #highlightSiblingMenuItem(next) {
-    console.log('Highlight');
     let li = this.#menu.querySelector('ul:not(.hidden) li.active');
     if (li) {
       li = next ? li.nextElementSibling : li.previousElementSibling;
@@ -128,4 +107,9 @@ class ThemeSelector {
   }
 }
 
+// Initialize the class on the body
+const theme = localStorage.getItem('theme') || 'system';
+if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark');
+}
 document.addEventListener('DOMContentLoaded', () => new ThemeSelector());

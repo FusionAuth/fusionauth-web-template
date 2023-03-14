@@ -89,23 +89,29 @@ title = frontmatter.title ? frontmatter.title : title
 
             <!-- Theme dropdown menu -->
             <ul class="absolute bg-white border border-slate-900/10 hidden rounded-md shadow-lg left-0 top-12 w-36 dark:bg-slate-900 dark:border-slate-100/10 dark:text-slate-200 lg:left-auto lg:right-0">
-              <li data-hover-class="bg-slate-100 dark:bg-slate-800">
-                <button type="button" class="flex font-medium group items-center px-2 py-1 text-sm w-full" data-theme="light" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-900 dark:text-indigo-200">
-                  <i class="fa-light fa-sun-bright fa-fw mr-3 text-lg text-slate-500" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-500"></i>
-                  Light
-                </button>
+              <li class="group">
+                <div class="dark:group-[.active]:bg-slate-800 group-[.active]:bg-slate-100">
+                  <button type="button" class="flex font-medium group items-center px-2 py-1 text-sm text-slate-900 w-full dark:text-indigo-200 dark:group-[.active]:text-indigo-400 group-[.active]:text-indigo" data-theme="light">
+                    <i class="fa-light fa-sun-bright fa-fw mr-3 text-lg text-slate-500" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-500"></i>
+                    Light
+                  </button>
+                </div>
               </li>
-              <li data-hover-class="bg-slate-100 dark:bg-slate-800">
-                <button type="button" class="flex font-medium group items-center px-2 py-1 text-sm w-full" data-theme="dark" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-900 dark:text-indigo-200">
-                  <i class="fa-light fa-moon fa-fw mr-3 text-lg text-slate-500" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-500"></i>
-                  Dark
-                </button>
+              <li class="group">
+                <div class="dark:group-[.active]:bg-slate-800 group-[.active]:bg-slate-100">
+                  <button type="button" class="flex font-medium group items-center px-2 py-1 text-sm text-slate-900 w-full dark:text-indigo-200 dark:group-[.active]:text-indigo-400 group-[.active]:text-indigo" data-theme="dark">
+                    <i class="fa-light fa-moon fa-fw mr-3 text-lg text-slate-500" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-500"></i>
+                    Dark
+                  </button>
+                </div>
               </li>
-              <li data-hover-class="bg-slate-100 dark:bg-slate-800">
-                <button type="button" class="flex font-medium group items-center px-2 py-1 text-sm w-full" data-theme="system" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-900 dark:text-indigo-200">
-                  <i class="fa-light fa-computer-classic fa-fw mr-3 text-lg text-slate-500" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-500"></i>
-                  System
-                </button>
+              <li class="group">
+                <div class="dark:group-[.active]:bg-slate-800 group-[.active]:bg-slate-100">
+                  <button type="button" class="flex font-medium group items-center px-2 py-1 text-sm text-slate-900 w-full dark:text-indigo-200 dark:group-[.active]:text-indigo-400 group-[.active]:text-indigo" data-theme="system">
+                    <i class="fa-light fa-computer-classic fa-fw mr-3 text-lg text-slate-500" data-active-class="text-indigo-600 dark:text-indigo-400" data-inactive-class="text-slate-500"></i>
+                    System
+                  </button>
+                </div>
               </li>
             </ul>
           </div>
@@ -301,15 +307,19 @@ title = frontmatter.title ? frontmatter.title : title
       <header class="border-b border-slate-900/10 flex flex-shrink items-center px-6 py-4 dark:border-slate-100/10">
         <i class="fa-regular fa-magnifying-glass mr-4"></i>
         <input type="text" class="border-0 bg-transparent mr-4 w-full" placeholder="Search" data-widget="search-input"/>
+        <i class="hidden fa-solid fa-loader fa-spin mr-4" style="--fa-animation-duration: 3s;" data-widget="search-loading-icon"></i>
         <button class="bg-slate-100 px-1.5 py-1 rounded-md text-[0.5rem] dark:bg-slate-700" data-widget="search-close">ESC</button>
       </header>
       <div class="overflow-auto py-4">
+        <!-- Search results -->
         <div data-widget="search-results">
           <h2 class="flex font-medium items-center pb-4 pt-2 px-6 text-slate-700 dark:text-slate-200">Results</h2>
           <ul class="px-6 py-4 space-y-2">
           </ul>
         </div>
-        <div class="overflow-auto py-4" data-widget="search-recent">
+
+        <!-- Recent searches (not currently implemented, so they are hidden) -->
+        <div class="hidden overflow-auto py-4" data-widget="search-recent">
           <h2 class="border-b border-slate-900/10 flex font-medium items-center pb-4 pt-2 px-6 text-slate-700 dark:border-slate-100/10 dark:text-slate-200">Recent</h2>
           <ul>
             {([...Array(10)].map(() =>
