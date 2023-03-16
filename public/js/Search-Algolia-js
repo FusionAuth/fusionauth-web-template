@@ -3,7 +3,6 @@
 class Search {
   #moveX;
   #moveY;
-  #pagefind;
   #searchInput;
   #searchModal;
   #searchResults;
@@ -14,6 +13,17 @@ class Search {
     this.#searchModal.addEventListener('mousemove', event => this.#handleMouseMove(event));
     this.#searchResults = document.querySelector('[data-widget="search-results"] ul');
     this.#searchInput = document.querySelector('[data-widget="search-input"]');
+
+    // const debounce = (func, delay) => {
+    //   let debounceTimer;
+    //   return function() {
+    //     const context = this;
+    //     const args = arguments;
+    //     clearTimeout(debounceTimer);
+    //     debounceTimer = setTimeout(() => func.apply(context, args), debounceTimer ? delay : 10);
+    //   };
+    // };
+    // this.#searchInput.addEventListener('input', debounce(event => this.#handleSearch(event), 1000));
     this.#searchInput.addEventListener('input', event => this.#handleSearch(event));
 
     document.addEventListener('click', event => this.#handleClick(event));
@@ -97,17 +107,33 @@ class Search {
     this.#moveY = event.screenY;
   }
 
-  async #handleSearch() {
+  #handleSearch() {
     if (this.#searchModal.classList.contains('hidden')) {
       return;
     }
 
-    if (!this.#pagefind) {
-      this.#pagefind = await import("/_pagefind/pagefind.js");
-    }
+    fetch(
+      'https://MN6ZCVNV21-dsn.algolia.net/1/indexes/website/query',
+      {
+        'body': JSON.stringify(
+          {
+            'params': `query=${this.#searchInput.value}`
+          }
+        ),
+        'headers': {
+          'Content-Type': 'application/json',
+          'X-Algolia-Application-Id': 'MN6ZCVNV21',
+          'X-Algolia-API-Key': 'e65ffc9f8bb352def753e7614de78416'
+        },
+        'method': 'POST'
+      }
+    ).then(response => {
+      if (!response.ok) {
+        // Ignore for now
+      }
 
-    const response = await this.#pagefind.search(this.#searchInput.value);
-    await this.#handleResults(response.results);
+      return response.json();
+    }).then(json => this.#handleResults(json));
   }
 
   #highlightMenuItem(option, focus) {
@@ -119,12 +145,10 @@ class Search {
     }
   }
 
-  async #handleResults(results) {
-    if (this.#searchInput.value.trim() !== '' && results && results.length > 0) {
-      this.#searchResults.innerHTML = '';
-      for (const result of results) {
-        const data = await result.data();
-        this.#searchResults.innerHTML += `<li class="group" data-widget="search-result">
+  #handleResults(json) {
+    if (this.#searchInput.value.trim() !== '' && json.hits && json.hits.length > 0) {
+      this.#searchResults.innerHTML = json.hits.map(hit => {
+        return `<li class="group" data-widget="search-result">
           <a href="${data.url}" class="bg-slate-100 rounded-md flex group items-center px-4 py-2 dark:bg-slate-700 group-[.active]:bg-indigo-600 group-[.active]:text-white">
             <i class="bg-white border border-slate-900/10 fa-regular fa-hashtag mr-4 px-1 py-0.5 rounded-md shadow-sm text-slate-400 text-sm dark:bg-slate-600 group-[.active]:bg-indigo-600 group-[.active]:border-indigo-300 group-[.active]:text-white"></i>
             <div class="flex flex-col">
@@ -138,7 +162,7 @@ class Search {
             <i class="fa-regular fa-angle-right"></i>
           </a>
         </li>`;
-      }
+      }).join('\n');
     } else {
       this.#searchResults.innerHTML = `<li data-widget="search-no-results">
         <div class="font-semibold px-2">

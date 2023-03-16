@@ -1,6 +1,5 @@
 ---
 import '../css/style.css'
-import TOC from '../components/TOC.astro'
 
 interface Frontmatter {
   author?: string
@@ -32,6 +31,7 @@ export interface URL {
 }
 
 let {description = "Looks like the developers forgot to include a description for this page. Sorry about that.", frontmatter = {}, headings = [], title = ""} = Astro.props
+console.log(headings)
 title = frontmatter.title ? frontmatter.title : title
 description = frontmatter.description ? frontmatter.description : description
 ---
@@ -216,7 +216,26 @@ description = frontmatter.description ? frontmatter.description : description
     <!-- Table of contents -->
     <aside class="bottom-0 fixed hidden left-auto overflow-y-auto pb-10 pt-8 px-4 right-[max(0px,calc(50%-45rem))] top-[3.5rem] w-[19rem] lg:block">
       <nav>
-        <TOC toc={headings}/>
+        <ul>
+          {(headings.map(h =>
+           <li><span>Yep {h.text}</span></li>
+          ))}
+          {([...Array(20)].map((e, i) =>
+            <li class={(i === 0 ? "section-active " : "") + "group"}>
+              <a href="#" class="block font-medium pb-2 text-slate-600 text-sm dark:text-slate-400 dark:group-[.section-active]:text-indigo-400 dark:hover:text-slate-100 group-[.section-active]:text-indigo-600 hover:text-slate-900">TOC Section</a>
+              <ul class="pb-2 space-y-3">
+                {([...Array(7)].map((e, i1) =>
+                  <li class={(i1 === 0 ? "active " : "") + "group"}>
+                    <a href="#" class="flex group items-center pl-4 text-slate-600 text-sm dark:text-slate-400 dark:group-[.active]:text-indigo-400 dark:hover:text-slate-100 group-[.active]:text-indigo-600 hover:text-slate-900">
+                      <i class="fa-regular fa-angle-right mr-2 text-xs"></i>
+                      Item 1
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
       </nav>
     </aside>
   </main>

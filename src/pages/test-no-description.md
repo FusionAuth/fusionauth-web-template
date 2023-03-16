@@ -1,7 +1,6 @@
 ---
 layout: ../layouts/Layout.astro
 title: Test
-description: Test page
 ---
 
 # Test
