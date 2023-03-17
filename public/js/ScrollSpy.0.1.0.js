@@ -14,17 +14,22 @@ class ScrollSpy {
     }
     this.#headers.sort((one, two) => one.offsetTop - two.offsetTop);
     this.#shift = 100;
+    this.#handleScroll();
   }
 
   #handleScroll() {
     const scroll = document.documentElement.scrollTop;
-
     let header = this.#headers[0];
     for (const h of this.#headers) {
       if (scroll + this.#shift > h.offsetTop) {
         header = h;
       }
     }
+
+    document.querySelectorAll('[data-widget="scroll-spy"] div[data-widget="scroll-spy-item"]').forEach(li => li.classList.remove('active', 'section-active'));
+
+    const group = document.querySelector(`a[href="#${header.id}"]`).closest('div[data-widget="scroll-spy-item"]');
+    group.classList.add('active');
   }
 }
 

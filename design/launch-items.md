@@ -1,3 +1,3 @@
 * [x] Fix the meta description
-* [ ] Add scroll spy
-* [ ] 
+* [x] Add scroll spy
+* [x] Sitemap

@@ -43,6 +43,7 @@ description = frontmatter.description ? frontmatter.description : description
   <meta name="viewport" content="width=device-width"/>
   <!-- TODO: Implement favicons by following this blog post https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7 -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="sitemap" href="/sitemap-index.xml">
   <link rel="stylesheet" href="/css/fontawesome.min.css"/>
   <link rel="stylesheet" href="/css/brands.min.css"/>
   <link rel="stylesheet" href="/css/duotone.min.css"/>
@@ -208,7 +209,7 @@ description = frontmatter.description ? frontmatter.description : description
     </div>
 
     <!-- Main content section -->
-    <article class="max-w-none prose prose-slate dark:prose-invert dark:prose-headings:text-indigo-400 lg:px-[19rem] prose-headings:scroll-mt-10 prose-headings:text-indigo-600">
+    <article class="max-w-none pb-24 prose prose-slate dark:prose-invert dark:prose-headings:text-indigo-400 lg:px-[19rem] prose-headings:scroll-mt-10 prose-headings:text-indigo-600">
       <h1 class="text-lg">{title}</h1>
       <slot/>
     </article>

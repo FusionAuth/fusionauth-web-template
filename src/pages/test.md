@@ -18,3 +18,42 @@ public class Testing {
 }
 ```
 
+## Another heading
+
+This is another section.
+
+```java
+public class Testing {
+
+}
+```
+
+### Another heading
+
+This is another section.
+
+```java
+public class Testing {
+
+}
+```
+
+# Another top heading
+
+This is another section.
+
+```java
+public class Testing {
+
+}
+```
+
+## Another subheading
+
+This is another section.
+
+```java
+public class Testing {
+
+}
+```

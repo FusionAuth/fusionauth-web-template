@@ -11,6 +11,7 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/sitemap": "^1.2.1",
 		"@astrojs/tailwind": "^3.0.1",
 		"@docsearch/js": "^3.3.3",
 		"@docsearch/react": "^3.3.3",
