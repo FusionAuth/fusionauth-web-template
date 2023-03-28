@@ -2,35 +2,6 @@
 import '../css/style.css'
 import TOC from '../components/TOC.astro'
 
-interface Frontmatter {
-  author?: string
-  date?: string
-  description?: string
-  file: string
-  section?: string
-  title?: string
-  url: string
-}
-interface Heading {
-  depth: number
-  slug: string
-  text: string
-}
-interface Page {
-  url: URL
-}
-interface Props {
-  description?: string
-  frontmatter: Frontmatter
-  page: Page
-  section?: string
-  title?: string
-}
-export interface URL {
-  next: string
-  prev: string
-}
-
 let {description = "Looks like the developers forgot to include a description for this page. Sorry about that.", frontmatter = {}, headings = [], title = ""} = Astro.props
 title = frontmatter.title ? frontmatter.title : title
 description = frontmatter.description ? frontmatter.description : description
@@ -44,6 +15,7 @@ description = frontmatter.description ? frontmatter.description : description
   <!-- TODO: Implement favicons by following this blog post https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7 -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <link rel="sitemap" href="/sitemap-index.xml">
+  <link rel="stylesheet" href="/css/diagrams.css"/>
   <link rel="stylesheet" href="/css/fontawesome.min.css"/>
   <link rel="stylesheet" href="/css/brands.min.css"/>
   <link rel="stylesheet" href="/css/duotone.min.css"/>

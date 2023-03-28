@@ -69,7 +69,7 @@ module.exports = {
 			},
 		},
 		fontFamily: {
-			sans: ['"Inter var"', '-apple-system', 'system-ui', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+			sans: ['-apple-system', 'system-ui', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
 		}
 	},
 	plugins: [
