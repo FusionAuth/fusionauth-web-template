@@ -1,4 +1,7 @@
+_pgbackup
+_pginfo
 dist
 node_modules
+tailwind_theme
 *.iws
 .DS_Store
