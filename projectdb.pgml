@@ -21,7 +21,7 @@
                 <dmcolor key="Orange" color="#f97316" shade-50="#feeadc" shade-100="#ffd4b8" shade-200="#ffbe93" shade-300="#ffa66e" shade-400="#ff8c45" shade-500="#F58320" shade-600="#ce5f13" shade-700="#a44c10" shade-800="#7d3a0d" shade-900="#572808"/>
                 <dmcolor key="Slate" color="0f172a" shade-50="#f8fafc" shade-100="#f1f5f9" shade-200="#e2e8f0" shade-300="#cbd5e1" shade-400="#94a3b8" shade-500="#6b7280" shade-600="#475569" shade-700="#334155" shade-800="#1e293b" shade-900="#0f172a"/>
             </dmdesignskill>
-            <dmdesignskill skill="fonts" family_1="Inter"></dmdesignskill>
+            <dmdesignskill skill="fonts" family_1="Inter" name_3="Montserrat" family_3="Montserrat" h1_3 h1_1="h1" h2_1="h2" h3_1="h3" h4_1="h4" h5_1="h5" h6_1="h6"></dmdesignskill>
             <dmdesignskill skill="background" image_for_colors="true" advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0"></dmdesignskill>
             <dmdesignskill skill="tailwind"></dmdesignskill>
         </dmdesign>
