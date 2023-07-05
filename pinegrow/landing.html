@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html class="antialiased" lang="en">
     <head>
-        <link href="../tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
-        <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
         <link href="https://rsms.me/inter/inter.css" rel="stylesheet" type="text/css">
+        <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
+        <link href="../tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
     </head>
     <body class="antialiased bg-slate-900 text-slate-200 dark">
         <!-- Header w/ border on bottom, full width and is sticky -->
@@ -11,48 +11,47 @@
             <!-- Header content -->
             <div class="container flex items-center max-w-8xl mx-auto px-4 py-2">
                 <!-- Logo -->
-                <div class="flex place-items-center"><a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_purple_orange.svg" alt="Logo" class="dark:hidden h-12"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-12 hidden"> </a><span class="font-normal text-3xl text-Slate-600">/</span><a href="" class="ease-in font-Montserrat font-medium hover:text-slate-400 ml-2 text-2xl text-white transition-colors"><span>Docs</span></a>
+                <div class="flex place-items-center">
+                    <a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_purple_orange.svg" alt="Logo" class="dark:hidden h-12"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-12 hidden"> </a>
+                    <span class="font-normal text-3xl text-Slate-600">/</span>
+                    <a href="" class="ease-in font-Montserrat font-medium hover:text-slate-400 ml-2 text-2xl text-white transition-colors"><span>Docs</span></a>
                 </div>
                 <nav id="header-nav" class="absolute bg-white h-screen hidden left-0 right-0 top-0 p-6 dark:bg-slate-900 lg:bg-transparent lg:flex lg:h-auto lg:items-center lg:ml-auto lg:p-0 lg:static lg:dark:bg-transparent">
                     <!-- Mobile close button -->
-                    <button type="button" class="absolute pl-4 pr-2 right-5 top-5 lg:hidden" data-widget="visibility-button" data-element="header-nav"><i class="fa-regular fa-x text-lg"></i>
+                    <button type="button" class="absolute pl-4 pr-2 right-5 top-5 lg:hidden" data-widget="visibility-button" data-element="header-nav">
+                        <i class="fa-regular fa-x text-lg"></i>
                     </button>
                     <!-- Header nav -->
                     <ul class="space-y-6 lg:flex lg:items-center lg:space-y-0">
-                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm">
-                            <a href="/download">Downloads</a>
+                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm"><a href="/download">Downloads</a>
                         </li>
-                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm">
-                            <a href="/docs/quickstarts/">Quickstarts</a>
+                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm"><a href="/docs/quickstarts/">Quickstarts</a>
                         </li>
-                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm">
-                            <a href="/docs/">Docs</a>
+                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm"><a href="/docs/">Docs</a>
                         </li>
-                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm">
-                            <a href="/articles/">Articles</a>
+                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm"><a href="/articles/">Articles</a>
                         </li>
-                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm">
-                            <a href="/dev-tools/">Dev Tools</a>
+                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm"><a href="/dev-tools/">Dev Tools</a>
                         </li>
-                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm">
-                            <a href="/docs/v1/tech/apis/">API Docs</a>
+                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm"><a href="/docs/v1/tech/apis/">API Docs</a>
                         </li>
-                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm">
-                            <a href="/docs/v1/tech/client-libraries/">SDKs</a>
+                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-lg transition-colors lg:pl-8 lg:text-sm"><a href="/docs/v1/tech/client-libraries/">SDKs</a>
                         </li>
                     </ul>
                     <!-- Theme selector and Github link -->
                     <div class="border-t border-slate-900/10 mt-6 pt-6 relative dark:border-slate-100/10 lg:border-t-0 lg:border-l lg:flex lg:items-center lg:ml-6 lg:mt-0 lg:pl-6 lg:pt-0 lg:space-x-6">
-                        <button type="button" class="hidden ml-auto lg:block" data-widget="search-button">
-                            <i class="fa-regular fa-magnifying-glass text-lg"></i>
-                        </button><a href="https://github.com/FusionAuth" class="flex items-center border border-slate-500 mt-5 rounded-lg p-2 text-slate-500 w-48 hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-300 lg:border-0 lg:mt-0 lg:p-0 lg:text-slate-400 lg:w-auto lg:dark:hover:bg-transparent lg:hover:bg-transparent"> <i class="fa-brands fa-github fa-fw text-lg"></i> <span class="ml-2 lg:hidden">GitHub</span> </a>
+                        <button type="button" class="hidden ml-auto lg:block" data-widget="search-button"><i class="fa-regular fa-magnifying-glass text-lg"></i>
+                        </button>
+                        <a href="https://github.com/FusionAuth" class="flex items-center border border-slate-500 mt-5 rounded-lg p-2 text-slate-500 w-48 hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-300 lg:border-0 lg:mt-0 lg:p-0 lg:text-slate-400 lg:w-auto lg:dark:hover:bg-transparent lg:hover:bg-transparent"> <i class="fa-brands fa-github fa-fw text-lg"></i> <span class="ml-2 lg:hidden">GitHub</span> </a>
                     </div>
                 </nav>
                 <!-- Mobile search button -->
-                <button type="button" class="ml-auto lg:hidden" data-widget="search-button"><i class="fa-regular fa-magnifying-glass text-lg"></i>
+                <button type="button" class="ml-auto lg:hidden" data-widget="search-button">
+                    <i class="fa-regular fa-magnifying-glass text-lg"></i>
                 </button>
                 <!-- Mobile nav button (data attributes control the nav to open) -->
-                <button type="button" class="ml-4 px-4 lg:hidden" data-widget="visibility-button" data-element="header-nav"><i class="fa-regular fa-ellipsis-vertical text-lg"></i>
+                <button type="button" class="ml-4 px-4 lg:hidden" data-widget="visibility-button" data-element="header-nav">
+                    <i class="fa-regular fa-ellipsis-vertical text-lg"></i>
                 </button>
             </div>
             <!-- Mobile nav button (data attributes control the nav to open) -->
@@ -60,9 +59,9 @@
                 <!-- Divider with a nasty padding hack (including the pb-2 above) -->
                 <div class="border-b border-slate-900/10 mb-2 dark:border-slate-100/10"></div>
                 <div class="flex items-center">
-                    <button type="button" data-widget="visibility-button" data-element="side-nav">
-                        <i class="fa-regular fa-bars text-lg"></i>
-                    </button><span class="ml-6 text-sm text-slate-500"> <span class="font-semibold text-slate-500">Testing</span> </span>
+                    <button type="button" data-widget="visibility-button" data-element="side-nav"><i class="fa-regular fa-bars text-lg"></i>
+                    </button>
+                    <span class="ml-6 text-sm text-slate-500"> <span class="font-semibold text-slate-500">Testing</span> </span>
                 </div>
             </div>
         </div>
@@ -72,10 +71,12 @@
                 <div class="container mx-auto lg:relative lg:top-12 2xl:relative">
                     <h1 class="font-extrabold text-4xl text-white">Start Building Your Application</h1>
                     <p class="font-medium pt-3 text-Slate-300 text-lg text-slate-400">Choose from of our selection of application types below to get started.</p>
-                    <div class="2xl:gap-8 container gap-16 grid grid-cols-1 lg:gap-5 lg:grid-cols-4 md:grid-cols-2 mt-10 mx-auto sm:grid-cols-2">
-                        <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/build/web-app-icon.svg" alt="Web App"> <h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Web App</h3> <p class="mt-3 text-center text-slate-600 text-sm">
+                    <div class="2xl:gap-8 container gap-16 grid grid-cols-1 lg:gap-5 lg:grid-cols-4 md:grid-cols-2 mt-10 mx-auto sm:grid-cols-2"><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/build/web-app-icon.svg" alt="Web App"> <h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Web App</h3> <p class="mt-3 text-center text-slate-600 text-sm">
           Traditional web applications that run on servers. </p> <p class="mt-4 text-slate-500 text-xs">
-          e.g. Express.js, Rails, Java, Drupal </p></a><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/build/single-page-app-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Single-Page App</h3> <p class="mt-3 text-center text-slate-600 text-sm">Javascript web app that runs in the browser</p> <p class="mt-4 text-slate-500 text-xs">e.g. Angular, React, Remix</p></a><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/build/native-mobile-app-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Native/Mobile App</h3> <p class="mt-3 text-center text-slate-600 text-sm">Mobile application that runs natively on a device</p> <p class="mt-4 text-slate-500 text-xs">e.g. iOS, Andriod</p></a><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/build/backend-api-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Backend/API</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add multi-factor authentication to your application</p> <p class="mt-4 text-slate-500 text-xs">e.g. Rails, .NET, Spring</p></a>
+          e.g. Express.js, Rails, Java, Drupal </p></a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/build/single-page-app-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Single-Page App</h3> <p class="mt-3 text-center text-slate-600 text-sm">Javascript web app that runs in the browser</p> <p class="mt-4 text-slate-500 text-xs">e.g. Angular, React, Remix</p></a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/build/native-mobile-app-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Native/Mobile App</h3> <p class="mt-3 text-center text-slate-600 text-sm">Mobile application that runs natively on a device</p> <p class="mt-4 text-slate-500 text-xs">e.g. iOS, Andriod</p></a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/build/backend-api-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Backend/API</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add multi-factor authentication to your application</p> <p class="mt-4 text-slate-500 text-xs">e.g. Rails, .NET, Spring</p></a>
                     </div>
                 </div>
             </div>
@@ -87,39 +88,45 @@
                     <div>
                         <h2 class="font-bold text-3xl">How to Run FusionAuth</h2>
                         <p class="font-normal mt-2 text-Slate-800 text-base">We offer multiple options to get your hands on FusionAuth.</p>
-                        <div class="container gap-6 grid grid-cols-2 mt-10 mx-auto sm:grid-cols-2 md:grid-cols-2 lg:gap-5 lg:grid-cols-4 2xl:gap-8"><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/run/install-locally-icon.svg" alt="Web App" class="w-20"> <h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Install Locally</h3> </a>
-                            <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/run/free-trial-cloud-icon.svg" alt="Web App" class="w-20"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Free Trial in the Cloud</h3> </a>
-                            <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/run/sandbox-icon.svg" alt="Web App" class="w-20"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Our Shared Sandbox</h3> </a>
-                            <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/run/marketplace.svg" alt="Web App" class="w-20"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Cloud Marketplaces</h3> </a>
+                        <div class="container gap-6 grid grid-cols-2 mt-10 mx-auto sm:grid-cols-2 md:grid-cols-2 lg:gap-5 lg:grid-cols-4 2xl:gap-8">
+                            <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/run/install-locally-icon.svg" alt="Web App" class="w-20"> <h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Install Locally</h3> </a><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/run/free-trial-cloud-icon.svg" alt="Web App" class="w-20"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Free Trial in the Cloud</h3> </a><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/run/sandbox-icon.svg" alt="Web App" class="w-20"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Our Shared Sandbox</h3> </a><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/run/marketplace.svg" alt="Web App" class="w-20"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Cloud Marketplaces</h3> </a>
                         </div>
                     </div>
                     <hr class="border-Slate-100 border-t-2 my-16">
                     <h2 class="font-bold text-3xl">Popular Use Cases</h2>
                     <p class="font-normal mt-2 text-Slate-800 text-base">Here are some of our customers most searched for use cases within our docs.</p>
-                    <div class="container gap-16 grid grid-cols-1 mt-10 mx-auto sm:grid-cols-2 md:grid-cols-2 lg:gap-5 lg:grid-cols-4 2xl:gap-8">
-                        <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/use%20cases/add-login-icon.svg" alt="Web App"> <h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Add Login</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add login, logout and or registration to your application.</p> </a><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/use%20cases/social-login-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Social Sign-On</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add social sign-on to your application.</p><p class="mt-4 text-slate-500 text-xs">e.g. Google, Twitter, Facebook</p> </a><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/use%20cases/enterprise-sign-on-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Enterprise Sign-On</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add enterpsie sign-on, SAML, OIDC to your application</p> </a><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/use%20cases/add-mfa-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Add MFA</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add multi-factor authentication to your application</p> </a>
+                    <div class="container gap-16 grid grid-cols-1 mt-10 mx-auto sm:grid-cols-2 md:grid-cols-2 lg:gap-5 lg:grid-cols-4 2xl:gap-8"><a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/use%20cases/add-login-icon.svg" alt="Web App"> <h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Add Login</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add login, logout and or registration to your application.</p> </a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/use%20cases/social-login-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Social Sign-On</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add social sign-on to your application.</p><p class="mt-4 text-slate-500 text-xs">e.g. Google, Twitter, Facebook</p> </a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/use%20cases/enterprise-sign-on-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Enterprise Sign-On</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add enterpsie sign-on, SAML, OIDC to your application</p> </a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex flex-col from-current group hover:border-indigo-500 items-center pb-10 pt-6 px-3 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/use%20cases/add-mfa-icon.svg" alt="Web App"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Add MFA</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add multi-factor authentication to your application</p> </a>
                     </div>
                 </div>
                 <div class="max-w-8xl px-4 py-8 text-slate-700 sm:pt-14 lg:pt-10">
                     <h2 class="font-bold text-3xl">Other Use Cases</h2>
-                    <div class="gap-x-8 gap-y-4 grid grid-cols-1 mt-10 sm:grid-cols-2 md:grid-cols-2"><a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
+                    <div class="gap-x-8 gap-y-4 grid grid-cols-1 mt-10 sm:grid-cols-2 md:grid-cols-2">
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Identity, Authentication &amp; Authorization</h3>
                                 <p class="mt-1 text-slate-600 text-xs">
         Learn everything you need to know about authentication, authorization, identity, and access management from our team of industry experts. </p>
-                            </div></a><a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
+                            </div></a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Manage Complicated Permissions</h3>
                                 <p class="mt-1 text-slate-600 text-xs">
         Learn everything you need to know about authentication, authorization, identity, and access management from our team of industry experts. </p>
-                            </div></a><a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
+                            </div></a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Protecting APIs with JSON Web Tokens</h3>
                                 <p class="mt-1 text-slate-600 text-xs">FusionAuth handles user authentication in your serverless and microservices based applications. Leverage popular API gateways to protect your APIs.</p>
-                            </div></a><a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
+                            </div></a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Consolidate Users&rsquo; Data</h3>
                                 <p class="mt-1 text-slate-600 text-xs">Integrating single sign-on into your applications means your users can access all their applications with one set of credentials, such as a username and password.</p>
-                            </div></a><a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
+                            </div></a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Migrating to FusionAuth</h3>
                                 <p class="mt-1 text-slate-600 text-xs">Oftentimes you are migrating to FusionAuth from another solution, whether it be homegrown or another vendor.</p>
-                            </div></a><a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
+                            </div></a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">User Registration &amp; Profile Management</h3>
                                 <p class="mt-1 text-slate-600 text-xs">FusionAuth self-service account management allows users to manage their accounts, including the ability to add Multi-factor Authentication (MFA).</p>
                             </div></a>
@@ -127,19 +134,17 @@
                 </div>
                 <div class="max-w-8xl px-4 py-8 text-slate-700 sm:pt-14 lg:pt-10">
                     <h2 class="font-bold text-3xl">Other Resources</h2>
-                    <div class="gap-x-8 gap-y-4 grid grid-cols-1 mt-10 sm:grid-cols-2 md:grid-cols-2">
-                        <a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
+                    <div class="gap-x-8 gap-y-4 grid grid-cols-1 mt-10 sm:grid-cols-2 md:grid-cols-2"><a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Release Notes</h3>
                                 <p class="mt-1 text-slate-600 text-xs">Learn about the release cadence and features included in recent versions of FusionAuth</p>
-                            </div></a>
-                        <a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
+                            </div></a><a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Blog</h3>
                                 <p class="mt-1 text-slate-600 text-xs">Keep up to date with articles on features, company announcements, and more.</p>
-                            </div></a>
-                        <a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
+                            </div></a><a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Download FusionAuth</h3>
                                 <p class="mt-1 text-slate-600 text-xs">Download FusionAuth and try it out. You can do so using Docker, RPMs, DEBs, Zip files, Kubernetes, and more.</p>
-                            </div></a><a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
+                            </div></a>
+                        <a href="#" class="bg-white border border-slate-200 ease-in flex from-current group hover:border-indigo-500 items-start px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors"> <div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Articles</h3>
                                 <p class="mt-1 text-slate-600 text-xs">Best practices, advice, and real world use cases to help you hone your expertise in all things auth.</p>
                             </div></a>
@@ -150,8 +155,10 @@
         <!-- Search modal -->
         <div class="backdrop-blur-sm bg-slate-500/10 fixed flex items-center justify-center hidden inset-0 overflow-auto z-20" data-widget="search">
             <div class="bg-white border border-slate-900/10 flex flex-col h-4/5 max-w-4xl mx-auto rounded-md shadow-2xl text-slate-500 w-11/12 dark:bg-slate-800 dark:border-slate-100/10 dark:text-slate-400">
-                <header class="border-b border-slate-900/10 flex flex-shrink items-center px-6 py-4 dark:border-slate-100/10"><i class="fa-regular fa-magnifying-glass mr-4"></i>
-                    <input type="text" class="border-0 bg-transparent mr-4 pl-2 pr-3 py-1.5 w-full" placeholder="Search" data-widget="search-input"><i class="hidden fa-solid fa-loader fa-spin mr-4" style="--fa-animation-duration: 3s;" data-widget="search-loading-icon"></i>
+                <header class="border-b border-slate-900/10 flex flex-shrink items-center px-6 py-4 dark:border-slate-100/10">
+                    <i class="fa-regular fa-magnifying-glass mr-4"></i>
+                    <input type="text" class="border-0 bg-transparent mr-4 pl-2 pr-3 py-1.5 w-full" placeholder="Search" data-widget="search-input">
+                    <i class="hidden fa-solid fa-loader fa-spin mr-4" style="--fa-animation-duration: 3s;" data-widget="search-loading-icon"></i>
                     <button class="bg-slate-100 px-1.5 py-1 rounded-md text-[0.5rem] dark:bg-slate-700" data-widget="search-close">ESC</button>
                 </header>
                 <div class="overflow-auto py-4">
@@ -165,85 +172,74 @@
                     <div class="hidden overflow-auto py-4" data-widget="search-recent">
                         <h2 class="border-b border-slate-900/10 flex font-medium items-center pb-4 pt-2 px-6 text-slate-700 dark:border-slate-100/10 dark:text-slate-200">Recent</h2>
                         <ul>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
-                                </button>
-                            </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
-                                </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
-                                </button>
-                            </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
-                                </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
-                                </button>
-                            </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
-                                </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
-                                </button>
-                            </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
-                                </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                </button>
+                            </li>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                                </button>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                </button>
+                            </li>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                                </button>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                </button>
+                            </li>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                                </button>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                </button>
+                            </li>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                                </button>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
                         </ul>
