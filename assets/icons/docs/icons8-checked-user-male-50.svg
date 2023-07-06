@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43.584375px" height="46.875px" viewBox="0 0 43.584375 46.875" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons8-checked-user-male-50</title>
+    <g id="Docs-LP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons8-checked-user-male-50" fill-rule="nonzero">
+            <circle id="Oval" fill="#F58320" cx="18.75" cy="9.375" r="9.375"></circle>
+            <path d="M27.1875,25 L9.375,25 C4.196875,25 0,29.196875 0,34.375 L0,43.75 L17.96875,43.75 L27.1875,25 Z" id="Path" fill="#6366F1"></path>
+            <path d="M37.5,34.375 L37.5,37.3125 L31.1875,43.75 L17.96875,43.75 L13.1875,38.96875 L27.1875,25 L28.125,25 C33.3125,25 37.5,29.1875 37.5,34.375 Z" id="Path" fill="#CBD5E1"></path>
+            <polygon id="Path" fill="#00B569" points="29.95 46.875 22.040625 38.9625 26.459375 34.54375 29.95 38.0375 39.165625 28.821875 43.584375 33.240625"></polygon>
+        </g>
+    </g>
+</svg>
