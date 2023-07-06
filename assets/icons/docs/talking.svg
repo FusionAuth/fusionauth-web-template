@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>talking</title>
+    <g id="talking" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons8-study-50" transform="translate(6, 9)" fill-rule="nonzero">
+            <circle id="Oval" fill="#2DAEFD" cx="21" cy="31.5" r="5.25"></circle>
+            <rect id="Rectangle" fill="#6366F1" x="0" y="0" width="21" height="34.125"></rect>
+            <rect id="Rectangle" fill="#2DAEFD" x="21" y="0" width="21" height="34.125"></rect>
+            <rect id="Rectangle" fill="#A2E4F4" x="5.25" y="0" width="15.75" height="28.875"></rect>
+            <rect id="Rectangle" fill="#A2E4F4" x="19.11" y="0" width="17.64" height="28.875"></rect>
+            <rect id="Rectangle" fill="#6366F1" x="26.25" y="7.875" width="5.25" height="5.25"></rect>
+            <rect id="Rectangle" fill="#6366F1" x="26.25" y="18.375" width="5.25" height="5.25"></rect>
+            <rect id="Rectangle" fill="#6366F1" x="10.5" y="7.875" width="10.5" height="5.25"></rect>
+            <rect id="Rectangle" fill="#6366F1" x="10.5" y="18.375" width="10.5" height="5.25"></rect>
+        </g>
+    </g>
+</svg>
