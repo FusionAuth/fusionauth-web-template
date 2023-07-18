@@ -26,5 +26,5 @@
             <dmdesignskill skill="tailwind"></dmdesignskill>
         </dmdesign>
     </dmdesigns>
-    <dmlocked tw-colors-gray="false" tw-colors-red="true" tw-colors-yellow="false" tw-colors-green="false" tw-colors-blue="true" tw-colors-indigo="true" tw-colors-purple="false" tw-colors-pink="false" tw-colors-Slate="true" tw-colors-Orange="true" fonts-family_1="true"></dmlocked>
+    <dmlocked tw-colors-gray="false" tw-colors-red="true" tw-colors-yellow="false" tw-colors-green="false" tw-colors-blue="true" tw-colors-indigo="true" tw-colors-purple="false" tw-colors-pink="false" tw-colors-Slate="true" tw-colors-Orange="true" fonts-family_1="true" fonts-family_4="true"></dmlocked>
 </project>
