@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html class="antialiased" lang="en">
     <head>
-        <link href="../tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
-        <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
-        <link href="https://rsms.me/inter/inter.css" rel="stylesheet" type="text/css">
-        <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css" rel="stylesheet" type="text/css">
         <link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css" rel="stylesheet" type="text/css">
+        <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
+        <link href="../tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
+        <link href="https://rsms.me/inter/inter.css" rel="stylesheet" type="text/css">
     </head>
     <body class="antialiased bg-slate-900 text-slate-200 dark">
-        <div class="border-Orange-500 border-b border-slate-900/20 dark:bg-slate-900 dark:border-orange-400 sticky top-0 w-full z-20">
-            <!-- Header content -->
-            <div class="container flex items-center max-w-8xl mx-auto px-4 py-2">
+        <nav class="bg-Slate-900 block border-b border-indigo-800 border-solid h-auto sticky text-left top-0 z-50">
+            <div class="flex justify-between max-w-8xl mx-auto px-4 py-2 lg:container">
                 <!-- Logo -->
                 <div class="flex place-items-center">
-                    <a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_purple_orange.svg" alt="Logo" class="dark:hidden h-12"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-12"> </a>
-                    <span class="font-light text-3xl text-Slate-600">/</span>
-                    <a href="" class="ease-in font-Montserrat font-medium hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors"><span>Docs</span></a>
+                    <a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_purple_orange.svg" alt="Logo" class="dark:hidden h-12"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-12 hidden"> </a>
+                    <span class="font-light text-2xl text-Slate-600">/</span>
+                    <a href="" class="ease-in font-bold hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors"><span>Docs</span></a>
                 </div>
-                <nav id="header-nav" class="absolute bg-white h-screen hidden left-0 right-0 top-0 p-6 dark:bg-slate-900 lg:bg-transparent lg:flex lg:h-auto lg:items-center lg:ml-auto lg:p-0 lg:static lg:dark:bg-transparent">
-                    <!-- Mobile close button -->
-                    <!-- Header nav -->
+                <div class="flex lg:hidden">
+                    <!-- Mobile menu button -->
+                    <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>
+                        <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Menu -->
+                <div class="absolute bg-white dark:bg-slate-900 h-screen hidden left-0 lg:bg-transparent lg:dark:bg-transparent lg:flex lg:h-auto lg:items-center lg:ml-auto lg:p-0 lg:static p-6 right-0 top-0">
                     <ul class="space-y-6 lg:flex lg:items-center lg:space-y-0">
-                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/download">Downloads</a>
+                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm">
+                            <a href="/docs/quickstarts/">Downloads</a>
                         </li>
-                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/quickstarts/">SDKs</a>
+                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/quickstarts/">SDKs</a>
                         </li>
-                        <li class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/">API Docs</a>
+                        <li class="ease-in font-bold hover:text-indigo-500 text-lg text-white transition-colors lg:mx-3 lg:text-sm">
+                            <a href="/docs/">API Docs</a>
                         </li>
                     </ul>
                     <div class="inline-block relative lg:mx-3">
@@ -40,44 +62,82 @@
       To: "transform opacity-0 scale-95"
   -->
                         <div class="mb-1">
-                            <button type="button" class="font-medium gap-x-1.5 group hover:text-indigo-500 inline-flex items-center text-base text-white" id="menu-button" aria-expanded="true" aria-haspopup="true">
-                                <p class="ease-in font-medium group-hover:text-indigo-500 text-sm">More</p>
+                            <button type="button" class="font-medium gap-x-1.5 group hover:text-indigo-500 inline-flex items-center text-white" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                <p class="ease-in font-Inter font-bold group-hover:text-indigo-500 text-sm">More</p>
                                 <svg class="-mr-1 group-hover:text-indigo-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                     <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
                                 </svg>
                             </button>
                         </div>
-                        <div class="absolute bg-white focus:outline-none mt-2 origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-xl top-11 w-56 z-10" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                            <div role="none" class="py-2">
+                        <div class="absolute bg-white focus:outline-none mt-2 origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg top-8 w-56 z-10" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                            <div class="py-1" role="none">
                                 <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                                <a href="#" class="block font-medium hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Technical Articles</a>
-                                <a href="#" class="block font-medium hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Blog</a>
-                                <a href="#" class="block font-medium hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Developer Tools</a><a href="#" class="block font-medium hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Release Notes</a>
+                                <a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Technical Articles</a>
+                                <a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Blog</a>
+                                <a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Developer Tools</a><a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Release Notes</a>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-Slate-800 h-[30px] inline-block min-h-[1em] mx-3 self-stretch w-0.5"></div>
-                    <a href="" class="ease-in mx-3 transition-all"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-4" fill="currentColor">
-                            <g>
-                                <path fill="none" d="M0 0h24v24H0z"/>
-                                <path fill-rule="nonzero" d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/>
-                            </g>
-                        </svg></a><a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-5">
-                            <g>
-                                <path fill="none" d="M0 0h24v24H0z"/>
-                                <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/>
-                            </g>
-                        </svg></a>
-                    <div class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 mx-3 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/download">Login</a>
+                    <div id="mobile-menu" class="lg:hidden">
+                        <div class="space-y-1 px-2 pb-3 pt-2 bg-gray-900 text-gray-300 hover:bg-gray-700">
+                            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Dashboard</a><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+                        </div>
+                        <div class="border-t border-gray-700 pb-3 pt-4">
+                            <div class="flex items-center px-5">
+                                <div class="flex-shrink-0">
+                                    <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                </div>
+                                <div class="ml-3">
+                                    <div class="text-base font-medium text-white">Tom Cook</div>
+                                    <div class="text-sm font-medium text-gray-400">tom@example.com</div>
+                                </div>
+                                <button type="button" class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"><span class="sr-only">View notifications</span>
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="mt-3 space-y-1 px-2"><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Your
+                                Profile</a><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Settings</a><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign
+                                out</a>
+                            </div>
+                        </div>
                     </div>
-                    <button class="bg-Orange-500 font-bold hover:bg-Orange-600 ml-3 px-3 py-2 rounded text-white text-xs tracking-tighter transition-colors uppercase">Talk to an Expert</button>
-                    <!-- Theme selector and Github link -->
-                </nav>
-                <!-- Mobile search button -->
+                    <div class="flex items-center">
+                        <div class="bg-Slate-800 h-[30px] inline-block min-h-[1em] mx-3 self-stretch w-0.5"></div><a href="" class="ease-in mx-3 transition-all"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-4" fill="currentColor">
+                                <g>
+                                    <path fill="none" d="M0 0h24v24H0z"/>
+                                    <path fill-rule="nonzero" d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/>
+                                </g>
+                            </svg></a><a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-5">
+                                <g>
+                                    <path fill="none" d="M0 0h24v24H0z"/>
+                                    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/>
+                                </g>
+                            </svg></a>
+                        <div class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 mx-3 text-base text-white transition-colors lg:mx-3 lg:text-sm">
+                            <a href="/download">Login</a>
+                        </div>
+                        <button class="bg-Orange-500 font-bold hover:bg-Orange-600 ml-3 px-3 py-2 rounded text-white text-xs tracking-tighter transition-colors uppercase">Talk to an Expert</button>
+                    </div>
+                </div>
+                <!-- Search button -->
                 <!-- Mobile nav button (data attributes control the nav to open) -->
             </div>
-            <!-- Mobile nav button (data attributes control the nav to open) -->
-        </div>
+            <div class="block lg:hidden" id="mobile-menu">
+                <div class="group-hover:duration-200 pb-3 pt-2 px-2 space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Downloads</a>
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">SDKs</a>
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">API Docs</a>
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Tech Docs</a>
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Blog</a>
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Developer Tools</a>
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors pb-4 pt-2 px-3 rounded-md text-base text-white">Release Notes</a>
+                    <hr class="bg-neutral-100 border-t-0 dark:opacity-20 h-px my-12 opacity-100"/><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors pb-2 pt-4 px-3 rounded-md text-base text-white">Login</a><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Talk To An Expert</a>
+                </div>
+            </div>
+        </nav>
         <!-- Header w/ border on bottom, full width and is sticky -->
         <!-- Hero -->
         <header class="bg-[center_left_150px] bg-cover bg-local bg-no-repeat" style="background-image:url('https://uploads-ssl.webflow.com/64120c16364ff0c493912814/6412178115bc90aaf62fefa9_dots%20code.svg');">
@@ -85,60 +145,56 @@
                 <div class="2xl:relative container lg:px-10 lg:relative lg:top-12 mx-auto px-10 xl:px-20">
                     <h1 class="font-extrabold text-4xl text-white">Start Building Your Application</h1>
                     <p class="font-medium pt-3 text-Slate-200 text-lg text-slate-400">Choose from of our selection of application types below to get started.</p>
-                    <div class="2xl:gap-8 container gap-16 grid grid-cols-1 lg:gap-5 lg:grid-cols-4 md:grid-cols-2 mt-10 mx-auto sm:grid-cols-2">
-                        <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/website-application.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"> <h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Web App</h3> <p class="mt-3 text-center text-slate-600 text-sm">
+                    <div class="2xl:gap-8 container gap-16 grid grid-cols-1 lg:gap-5 lg:grid-cols-4 md:grid-cols-2 mt-10 mx-auto sm:grid-cols-2"><a href="https://fusionauth.io/docs/quickstarts/#web-application" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/website-application.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"> <h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Web App</h3> <p class="mt-3 text-center text-slate-600 text-sm">
           Traditional web applications that run on servers. </p> <p class="mt-4 text-center text-slate-500 text-xs">
-          e.g. Express.js, Rails, Java, Drupal </p></a><a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/single-page-app.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Single-Page App</h3> <p class="mt-3 text-center text-slate-600 text-sm">Javascript web app that runs in the browser</p> <p class="mt-4 text-center text-slate-500 text-xs">e.g. Angular, React, Remix</p></a><a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/mobile-native-applications.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Native/Mobile App</h3> <p class="mt-3 text-center text-slate-600 text-sm">Mobile application that runs natively on a device</p> <p class="mt-4 text-center text-slate-500 text-xs">e.g. iOS, Andriod</p></a><a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/backend-api.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Backend/API</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add multi-factor authentication to your application</p> <p class="mt-4 text-center text-slate-500 text-xs">e.g. Rails, .NET, Spring</p></a>
+          e.g. Express.js, Rails, Java, Drupal </p></a>
+                        <a href="https://fusionauth.io/docs/quickstarts/#spa" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/single-page-app.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Single-Page App</h3> <p class="mt-3 text-center text-slate-600 text-sm">Javascript web app that runs in the browser</p> <p class="mt-4 text-center text-slate-500 text-xs">e.g. Angular, React, Remix</p></a>
+                        <a href="https://fusionauth.io/docs/quickstarts/#mobile-app" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/mobile-native-applications.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Native/Mobile App</h3> <p class="mt-3 text-center text-slate-600 text-sm">Mobile application that runs natively on a device</p> <p class="mt-4 text-center text-slate-500 text-xs">e.g. iOS, Andriod</p></a>
+                        <a href="https://fusionauth.io/docs/quickstarts/#api" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/backend-api.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-slate-800 text-xl tracking-tight">Backend/API</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add multi-factor authentication to your application</p> <p class="mt-4 text-center text-slate-500 text-xs">e.g. Rails, .NET, Spring</p></a>
                     </div>
                 </div>
             </div>
         </header>
         <!-- Main content section -->
-        <article class="bg-white h-auto pb-24">
+        <article class="bg-white h-auto pb-24" href="https://fusionauth.io/docs/quickstarts/#web-application">
             <div class="container mx-auto px-10 lg:px-10 xl:px-20">
                 <div class="max-w-8xl py-8 text-slate-700 sm:pt-14 lg:pt-56 xl:pt-48">
                     <div>
                         <h2 class="font-semibold text-3xl tracking-tight">How to Run FusionAuth</h2>
                         <p class="font-normal mt-2 text-Slate-800 text-base">We offer multiple options to get your hands on FusionAuth.</p>
-                        <div class="container gap-6 grid grid-cols-2 mt-10 mx-auto sm:grid-cols-2 md:grid-cols-2 lg:gap-5 lg:grid-cols-4 2xl:gap-8"><a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/install-locally.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"> <h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Install Locally</h3> </a>
-                            <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/fusionauth-cloud.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Free Trial in the Cloud</h3> </a>
-                            <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/shared-sandbox.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Our Shared Sandbox</h3> </a>
-                            <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/marketplace.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Cloud Marketplaces</h3> </a>
+                        <div class="container gap-6 grid grid-cols-2 mt-10 mx-auto sm:grid-cols-2 md:grid-cols-2 lg:gap-5 lg:grid-cols-4 2xl:gap-8">
+                            <a href="https://fusionauth.io/docs/v1/tech/installation-guide/docker" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/install-locally.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"> <h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Install Locally</h3> </a><a href="https://fusionauth.io/pricing?step=plan&hosting=basic-cloud" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/fusionauth-cloud.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Free Trial in the Cloud</h3> </a><a href="https://sandbox.fusionauth.io/" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/shared-sandbox.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Our Shared Sandbox</h3> </a><a href="https://fusionauth.io/docs/v1/tech/installation-guide/marketplaces#marketplace-install" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/marketplace.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 leading-6 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Cloud Marketplaces</h3> </a>
                         </div>
                     </div>
                     <hr class="border-Slate-100 border-t-2 my-16">
                     <h2 class="font-semibold text-3xl tracking-tight">Popular Use Cases</h2>
                     <p class="font-normal mt-2 text-Slate-800 text-base">Here are some of our customers most searched for use cases within our docs.</p>
-                    <div class="container gap-16 grid grid-cols-1 mt-10 mx-auto sm:grid-cols-2 md:grid-cols-2 lg:gap-5 lg:grid-cols-4 2xl:gap-8">
-                        <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/add-login.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"> <h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Add Login</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add login, logout and or registration to your application.</p> </a><a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/social-sign-on.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Social Sign-On</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add social sign-on to your application.</p><p class="mt-4 text-center text-slate-500 text-xs">e.g. Google, Twitter, Facebook</p> </a><a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/enterprise-sign-on.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Enterprise Sign-On</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add enterpsie sign-on, SAML, OIDC to your application</p> </a><a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/add-mfa.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Add MFA</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add multi-factor authentication to your application</p> </a>
+                    <div class="container gap-16 grid grid-cols-1 mt-10 mx-auto sm:grid-cols-2 md:grid-cols-2 lg:gap-5 lg:grid-cols-4 2xl:gap-8"><a href="https://fusionauth.io/docs/v1/tech/5-minute-setup-guide" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/add-login.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"> <h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Add Login</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add login, logout and or registration to your application.</p> </a>
+                        <a href="https://fusionauth.io/docs/v1/tech/identity-providers/#social-identity-providers" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/social-sign-on.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Social Sign-On</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add social sign-on to your application.</p><p class="mt-4 text-center text-slate-500 text-xs">e.g. Google, Twitter, Facebook</p> </a>
+                        <a href="https://fusionauth.io/docs/v1/tech/identity-providers/#enterprise-identity-providers" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/enterprise-sign-on.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Enterprise Sign-On</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add enterpsie sign-on, SAML, OIDC to your application</p> </a>
+                        <a href="https://fusionauth.io/docs/v1/tech/guides/multi-factor-authentication" class="bg-white border border-Slate-300 border-slate-200 ease-in flex flex-col group hover:border-indigo-500 items-center px-3 py-8 rounded shadow to-blue-50/75 transition-colors"> <img src="../assets/icons/docs%20main/add-mfa.svg" alt="Web App" class="mb-3 rounded-md shadow w-16"><h3 class="font-medium group-hover:text-indigo-500 mt-5 text-Slate-900 text-center text-lg text-slate-800 tracking-tight">Add MFA</h3> <p class="mt-3 text-center text-slate-600 text-sm">Add multi-factor authentication to your application</p> </a>
                     </div>
                 </div>
                 <div class="max-w-8xl py-8 text-slate-700 sm:pt-14 lg:pt-10">
                     <h2 class="font-semibold text-3xl tracking-tight">Other Use Cases</h2>
-                    <div class="gap-x-8 gap-y-4 grid grid-cols-1 mt-10 sm:grid-cols-2 md:grid-cols-2">
-                        <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex from-current group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/identity-authentication.svg" class="w-10"><div>
+                    <div class="gap-x-8 gap-y-4 grid grid-cols-1 mt-10 sm:grid-cols-2 md:grid-cols-2"><a href="https://fusionauth.io/learn/expert-advice/" class="bg-white border border-Slate-300 border-slate-200 ease-in flex from-current group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/identity-authentication.svg" class="w-10"><div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Identity, Authentication &amp; Authorization</h3>
                                 <p class="mt-1 text-slate-600 text-sm">
         Learn everything you need to know about authentication, authorization, identity, and access management from our team of industry experts. </p>
-                            </div></a>
-                        <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex from-current group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/manage-permissions.svg" class="w-10"><div>
+                            </div></a><a href="https://fusionauth.io/docs/v1/tech/core-concepts/entity-management" class="bg-white border border-Slate-300 border-slate-200 ease-in flex from-current group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/manage-permissions.svg" class="w-10"><div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Manage Complicated Permissions</h3>
                                 <p class="mt-1 text-slate-600 text-sm">
         Learn everything you need to know about authentication, authorization, identity, and access management from our team of industry experts. </p>
-                            </div></a>
-                        <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex from-current group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/protecting-apis.svg" class="w-10"><div>
+                            </div></a><a href="https://fusionauth.io/docs/v1/tech/developer-guide/api-gateways/" class="bg-white border border-Slate-300 border-slate-200 ease-in flex from-current group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/protecting-apis.svg" class="w-10"><div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Protecting APIs with JSON Web Tokens</h3>
                                 <p class="mt-1 text-slate-600 text-sm">FusionAuth handles user authentication in your serverless and microservices based applications. Leverage popular API gateways to protect your APIs.</p>
-                            </div></a>
-                        <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex from-current group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/user-data.svg" class="w-10"><div>
+                            </div></a><a href="https://fusionauth.io/docs/v1/tech/guides/single-sign-on" class="bg-white border border-Slate-300 border-slate-200 ease-in flex from-current group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/user-data.svg" class="w-10"><div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Consolidate Users&rsquo; Data</h3>
                                 <p class="mt-1 text-slate-600 text-sm">Integrating single sign-on into your applications means your users can access all their applications with one set of credentials, such as a username and password.</p>
-                            </div></a>
-                        <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/migrating.svg" class="w-10"><div>
+                            </div></a><a href="https://fusionauth.io/docs/v1/tech/migration-guide/" class="bg-white border border-Slate-300 border-slate-200 ease-in flex group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/migrating.svg" class="w-10"><div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Migrating to FusionAuth</h3>
                                 <p class="mt-1 text-slate-600 text-sm">Oftentimes you are migrating to FusionAuth from another solution, whether it be homegrown or another vendor.</p>
-                            </div></a>
-                        <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex from-current group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/user-registration.svg" class="w-10"><div>
+                            </div></a><a href="https://fusionauth.io/docs/v1/tech/account-management/" class="bg-white border border-Slate-300 border-slate-200 ease-in flex from-current group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded self-center space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/user-registration.svg" class="w-10"><div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">User Registration &amp; Profile Management</h3>
                                 <p class="mt-1 text-slate-600 text-sm">FusionAuth self-service account management allows users to manage their accounts, including the ability to add Multi-factor Authentication (MFA).</p>
                             </div></a>
@@ -146,17 +202,19 @@
                 </div>
                 <div class="max-w-8xl py-8 text-slate-700 sm:pt-14 lg:pt-10">
                     <h2 class="font-semibold text-3xl tracking-tight">Other Resources</h2>
-                    <div class="gap-x-8 gap-y-4 grid grid-cols-1 mt-10 sm:grid-cols-2 md:grid-cols-2"><a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/release-notes.svg" class="w-10"><div>
+                    <div class="gap-x-8 gap-y-4 grid grid-cols-1 mt-10 sm:grid-cols-2 md:grid-cols-2">
+                        <a href="https://fusionauth.io/docs/v1/tech/release-notes" class="bg-white border border-Slate-300 border-slate-200 ease-in flex group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/release-notes.svg" class="w-10"><div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Release Notes</h3>
                                 <p class="mt-1 text-slate-600 text-sm">Learn about the release cadence and features included in recent versions of FusionAuth</p>
-                            </div></a><a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/blog.svg" class="w-10"><div>
+                            </div></a>
+                        <a href="https://fusionauth.io/blog/" class="bg-white border border-Slate-300 border-slate-200 ease-in flex group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/blog.svg" class="w-10"><div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Blog</h3>
                                 <p class="mt-1 text-slate-600 text-sm">Keep up to date with articles on features, company announcements, and more.</p>
-                            </div></a><a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/download-fusionauth.svg" class="w-10"><div>
+                            </div></a>
+                        <a href="https://fusionauth.io/download" class="bg-white border border-Slate-300 border-slate-200 ease-in flex group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/download-fusionauth.svg" class="w-10"><div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Download FusionAuth</h3>
                                 <p class="mt-1 text-slate-600 text-sm">Download FusionAuth and try it out. You can do so using Docker, RPMs, DEBs, Zip files, Kubernetes, and more.</p>
-                            </div></a>
-                        <a href="#" class="bg-white border border-Slate-300 border-slate-200 ease-in flex group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/articles.svg" class="w-10"><div>
+                            </div></a><a href="https://fusionauth.io/articles/" class="bg-white border border-Slate-300 border-slate-200 ease-in flex group group-hover:ease-linear group-hover:shadow-md group-hover:transition hover:duration-200 hover:ease-linear hover:shadow-md hover:transition-shadow items-center px-6 py-5 rounded space-x-4 to-blue-50/75 transition-colors sm:flex-col sm:items-start sm:self-stretch md:flex-row md:items-center lg:flex-nowrap xl:items-center xl:self-stretch"> <img src="../assets/icons/docs/articles.svg" class="w-10"><div>
                                 <h3 class="font-medium group-hover:text-indigo-500 text-md text-slate-800">Articles</h3>
                                 <p class="mt-1 text-slate-600 text-sm">Best practices, advice, and real world use cases to help you hone your expertise in all things auth.</p>
                             </div></a>
@@ -167,8 +225,10 @@
         <!-- Search modal -->
         <div class="backdrop-blur-sm bg-slate-500/10 fixed flex inset-0 invisible items-center justify-center overflow-auto z-20" data-widget="search">
             <div class="bg-white border border-slate-900/10 flex flex-col h-4/5 max-w-4xl mx-auto rounded-md shadow-2xl text-slate-500 w-11/12 dark:bg-slate-800 dark:border-slate-100/10 dark:text-slate-400">
-                <header class="border-b border-slate-900/10 flex flex-shrink items-center px-6 py-4 dark:border-slate-100/10"><i class="fa-regular fa-magnifying-glass mr-4"></i>
-                    <input type="text" class="border-0 bg-transparent mr-4 pl-2 pr-3 py-1.5 w-full" placeholder="Search" data-widget="search-input"><i class="hidden fa-solid fa-loader fa-spin mr-4" style="--fa-animation-duration: 3s;" data-widget="search-loading-icon"></i>
+                <header class="border-b border-slate-900/10 flex flex-shrink items-center px-6 py-4 dark:border-slate-100/10">
+                    <i class="fa-regular fa-magnifying-glass mr-4"></i>
+                    <input type="text" class="border-0 bg-transparent mr-4 pl-2 pr-3 py-1.5 w-full" placeholder="Search" data-widget="search-input">
+                    <i class="hidden fa-solid fa-loader fa-spin mr-4" style="--fa-animation-duration: 3s;" data-widget="search-loading-icon"></i>
                     <button class="bg-slate-100 px-1.5 py-1 rounded-md text-[0.5rem] dark:bg-slate-700" data-widget="search-close">ESC</button>
                 </header>
                 <div class="overflow-auto py-4">
@@ -182,85 +242,74 @@
                     <div class="hidden overflow-auto py-4" data-widget="search-recent">
                         <h2 class="border-b border-slate-900/10 flex font-medium items-center pb-4 pt-2 px-6 text-slate-700 dark:border-slate-100/10 dark:text-slate-200">Recent</h2>
                         <ul>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
-                                </button>
-                            </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
-                                </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
-                                </button>
-                            </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
-                                </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
-                                </button>
-                            </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
-                                </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
-                                </button>
-                            </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
-                                </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
-                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10"><a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
-                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite">
-                                    <i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
                                 </button>
-                                <button class="ml-4" data-widget="search-remove">
-                                    <i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                </button>
+                            </li>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                                </button>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                </button>
+                            </li>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                                </button>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                </button>
+                            </li>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                                </button>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
+                                </button>
+                            </li>
+                            <li class="border-b border-slate-900/10 flex items-center pr-4 w-full dark:border-slate-100/10">
+                                <a href="#" class="flex-grow px-6 py-4"> <span class="mr-auto text-sm">Item 1</span> </a>
+                                <button class="border-r border-slate-900/10 pr-4 dark:border-slate-100/10" data-widget="search-favorite"><i class="fa-regular fa-star dark:hover:text-indigo-400 hover:text-indigo-600"></i>
+                                </button>
+                                <button class="ml-4" data-widget="search-remove"><i class="fa-regular fa-x dark:hover:text-slate-100 hover:text-slate-900"></i>
                                 </button>
                             </li>
                         </ul>
@@ -268,83 +317,85 @@
                 </div>
             </div>
         </div>
-        <footer class="bg-gradient-to-tl from-Slate-900 pt-20 to-blue-900 via-Slate-800">
-            <div class="container mx-auto">
-                <div class="dark:px-20 gap-8 grid grid-cols-1 mb-16 px-4 py-6 md:grid-cols-4 lg:grid-cols-5 lg:py-8" style="display:grid;grid-template-columns:3fr 1fr 1fr 1fr 1fr;grid-template-rows:auto;">
-                    <div>
-                        <img src="../assets/logo/fa_horizontal_text_white_orange.svg" class="w-72 xl:w-80">
+        <footer class="from-Slate-900 to-blue-900 via-Slate-800">
+            <div class="container mx-auto lg:pt-10">
+                <div class="grid grid-rows-2 pb-10 px-4 text-center md:mx-5 md:text-left lg:grid-cols-6 lg:grid-rows-1 lg:pb-12 lg:pt-8 xl:grid-cols-6 2xl:pb-14 2xl:pt-10">
+                    <div class="col-span-2 flex place-content-center md:col-span-4 md:place-content-center lg:block lg:col-span-2 lg:place-self-start xl:col-span-2 xl:grid-flow-col xl:place-self-start">
+                        <img src="../assets/logo/fa_horizontal_text_white_orange.svg" class="w-56 lg:w-10/12 xl:w-64">
                     </div>
-                    <div>
-                        <h4 class="font-semibold mb-6 text-sm uppercase">Developers</h4>
-                        <ul class="font-medium text-Slate-400 text-sm">
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">About</a>
+                    <div class="mb-7 md:mb-0">
+                        <h4 class="font-semibold mb-3 text-sm uppercase">Get Started</h4>
+                        <ul class="capitalize font-medium text-Slate-400 text-sm">
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">download locally</a>
                             </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Careers</a>
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">run in cloud</a>
                             </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Brand Center</a>
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">quickstarts</a>
                             </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Blog</a>
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">quickstarts</a>
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="font-semibold mb-6 text-sm uppercase">resources</h4>
-                        <ul class="font-medium text-Slate-400 text-sm">
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">About</a>
+                    <div class="mb-7 md:mb-0">
+                        <h4 class="font-semibold mb-3 text-sm uppercase">product</h4>
+                        <ul class="capitalize font-medium text-Slate-400 text-sm">
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">features</a>
                             </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Careers</a>
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">pricing</a>
                             </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Brand Center</a>
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">quickstars</a>
                             </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Blog</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold mb-6 text-sm uppercase">use cases</h4>
-                        <ul class="font-medium text-Slate-400 text-sm">
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">About</a>
-                            </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Careers</a>
-                            </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Brand Center</a>
-                            </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Blog</a>
+                            <li class="mb-3">
+                                <a href="file:///Users/seanbryant/FusionAuth%20Website/fusionauth-web-template/pinegrow/landing.html?pgedit=1&amp;pgpvid=1#" spellcheck="false" data-medium-editor-element="true" role="textbox" aria-multiline="true" data-medium-editor-editor-index="13" medium-editor-index="fee3e592-0323-c163-6c01-fca889d62c66" data-placeholder="Type your text" data-medium-focused="true">Quickstars</a>
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="font-semibold mb-6 text-sm uppercase">get started</h4>
-                        <ul class="font-medium text-Slate-400 text-sm">
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">About</a>
+                    <div class="mb-7 md:mb-0">
+                        <h4 class="font-semibold mb-3 text-sm uppercase">developers</h4>
+                        <ul class="capitalize font-medium text-Slate-400 text-sm">
+                            <li class="mb-3">documentation</li>
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">release notes</a>
                             </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Careers</a>
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">quickstarts</a>
                             </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Brand Center</a>
-                            </li>
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Blog</a>
+                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">quickstarts</a>
                             </li>
                         </ul>
-                        <div class="flex pt-8 space-x-5">
-                            <a href="#" class="hover:duration-200 hover:ease-linear hover:text-indigo-500 hover:transition-colors text-Slate-400"> <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-                                    <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
-                                </svg> <span class="sr-only">Facebook page</span> </a>
-                            <a href="#" class="hover:duration-200 hover:ease-linear hover:text-indigo-500 hover:transition-colors text-Slate-400"> <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                                    <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
-                                </svg> <span class="sr-only">Discord community</span> </a>
-                            <a href="#" class="hover:duration-200 hover:ease-linear hover:text-indigo-500 hover:transition-colors text-Slate-400"> <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
-                                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
-                                </svg> <span class="sr-only">Twitter page</span> </a>
-                            <a href="#" class="hover:duration-200 hover:ease-linear hover:text-indigo-500 hover:transition-colors text-Slate-400"> <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
-                                </svg> <span class="sr-only">GitHub account</span> </a>
-                            <a href="#" class="hover:duration-200 hover:ease-linear hover:text-indigo-500 hover:transition-colors text-Slate-400"> <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
-                                </svg> <span class="sr-only">Dribbble account</span> </a>
-                        </div>
+                    </div>
+                    <div class="mb-7 md:mb-0">
+                        <h4 class="font-semibold mb-3 text-sm uppercase">resources</h4>
+                        <ul class="capitalize font-medium text-Slate-400 text-sm">
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">support forum</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">slack community</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">articles</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">blogs</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="border-Slate-400 border-t container flex flex-wrap justify-center mx-auto px-4 py-6 md:flex md:items-center md:justify-center lg:justify-between"><span class="dark:text-gray-300 font-medium mb-4 text-gray-500 text-sm sm:text-center lg:mb-0">&copy; 2023 FusionAuth, Inc. All Rights Reserved.</span><span class="font-normal text-Slate-300 text-center text-gray-500 text-xs sm:text-center md:text-center"><a href="*" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">License </a>&bull;<a href="*" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">License FAQ</a>&nbsp;&bull;<a href="*" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">Privacy</a>
+                <div class="container inline-flex items-center justify-center mb-10 mt-2 mx-auto space-x-5 lg:justify-end lg:mb-7 lg:pr-9 xl:pr-20 2xl:justify-end">
+                    <a href="https://github.com/FusionAuth"> <img src="../assets/footer/github.svg" class="w-5"></a><a href="#"> <img src="../assets/footer/slack.svg" class="w-5"></a><a href="https://twitter.com/fusionauth"> <img src="../assets/footer/twitter.svg" class="w-5" href></a>
+                    <a href="https://www.linkedin.com/company/fusionauth/"> <img src="../assets/footer/linkedin.svg" class="w-5" href></a><a href="https://www.youtube.com/@FusionAuth"> <img src="../assets/footer/youtube.svg" class="w-5"></a><a href="https://dev.to/fusionauth"> <img src="../assets/footer/dev.svg" class="w-5"></a>
+                </div>
+                <div class="border-Slate-400 border-t container flex flex-wrap justify-center mx-auto px-4 py-6 md:flex md:items-center md:justify-center lg:justify-between">
+                    <span class="dark:text-gray-300 font-medium mb-4 text-gray-500 text-sm sm:text-center lg:mb-0">&copy; 2023 FusionAuth, Inc. All Rights Reserved.</span>
+                    <span class="font-normal text-Slate-300 text-center text-gray-500 text-xs sm:text-center md:text-center"><a href="*" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">License </a>&bull;<a href="*" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">License FAQ</a>&nbsp;&bull;<a href="*" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">Privacy</a>
 &bull;<a href="*" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">Product Privacy Policy</a> &bull;<a href="*" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">Cookie Policy</a></span>
                 </div>
             </div>
