@@ -1,18 +1,6 @@
 <project>
     <documents></documents>
     <dmdesigns>
-        <dmdesign>
-            <dmdesignskill skill="tw.colors">
-                <dmcolor key="red" color="rgba(239,68,68,1)" shade-50="rgba(254,242,242,1)" shade-100="rgba(254,226,226,1)" shade-200="rgba(254,202,202,1)" shade-300="rgba(252,165,165,1)" shade-400="rgba(248,113,113,1)" shade-500="rgba(239,68,68,1)" shade-600="rgba(220,38,38,1)" shade-700="rgba(185,28,28,1)" shade-800="rgba(153,27,27,1)" shade-900="rgba(127,29,29,1)"/>
-                <dmcolor key="blue" color="rgba(59,130,246,1)" shade-50="rgba(239,246,255,1)" shade-100="rgba(219,234,254,1)" shade-200="rgba(191,219,254,1)" shade-300="rgba(147,197,253,1)" shade-400="rgba(96,165,250,1)" shade-500="rgba(59,130,246,1)" shade-600="rgba(37,99,235,1)" shade-700="rgba(29,78,216,1)" shade-800="rgba(30,64,175,1)" shade-900="rgba(30,58,138,1)"/>
-                <dmcolor key="indigo" color="rgba(99,102,241,1)" shade-50="rgba(238,242,255,1)" shade-100="rgba(224,231,255,1)" shade-200="rgba(199,210,254,1)" shade-300="rgba(165,180,252,1)" shade-400="rgba(129,140,248,1)" shade-500="rgba(99,102,241,1)" shade-600="rgba(79,70,229,1)" shade-700="rgba(67,56,202,1)" shade-800="rgba(55,48,163,1)" shade-900="rgba(49,46,129,1)"/>
-                <dmcolor key="Slate" color="#0f172a" shade-50="#dbdcdf" shade-100="#aeb0b7" shade-200="#838691" shade-300="#5a5e6d" shade-400="#33384a" shade-500="#0f172a" shade-600="#0f1423" shade-700="#0d111d" shade-800="#090d17" shade-900="#05080f"/>
-                <dmcolor key="Orange" color="#f97316" shade-50="#feeadc" shade-100="#ffd4b8" shade-200="#ffbe93" shade-300="#ffa66e" shade-400="#ff8c45" shade-500="#F58320" shade-600="#ce5f13" shade-700="#a44c10" shade-800="#7d3a0d" shade-900="#572808"/>
-            </dmdesignskill>
-            <dmdesignskill skill="fonts"></dmdesignskill>
-            <dmdesignskill skill="background" image_for_colors="true" advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0"></dmdesignskill>
-            <dmdesignskill skill="tailwind"></dmdesignskill>
-        </dmdesign>
         <dmdesign active>
             <dmdesignskill skill="tw.colors">
                 <dmcolor key="red" color="rgba(239,68,68,1)" shade-50="rgba(254,242,242,1)" shade-100="rgba(254,226,226,1)" shade-200="rgba(254,202,202,1)" shade-300="rgba(252,165,165,1)" shade-400="rgba(248,113,113,1)" shade-500="rgba(239,68,68,1)" shade-600="rgba(220,38,38,1)" shade-700="rgba(185,28,28,1)" shade-800="rgba(153,27,27,1)" shade-900="rgba(127,29,29,1)"/>
@@ -26,5 +14,5 @@
             <dmdesignskill skill="tailwind"></dmdesignskill>
         </dmdesign>
     </dmdesigns>
-    <dmlocked tw-colors-gray="false" tw-colors-red="true" tw-colors-yellow="false" tw-colors-green="false" tw-colors-blue="true" tw-colors-indigo="true" tw-colors-purple="false" tw-colors-pink="false" tw-colors-Slate="false" tw-colors-Orange="true" fonts-family_1="true" fonts-family_4="true"></dmlocked>
+    <dmlocked tw-colors-gray="false" tw-colors-red="true" tw-colors-yellow="false" tw-colors-green="false" tw-colors-blue="true" tw-colors-indigo="true" tw-colors-purple="false" tw-colors-pink="false" tw-colors-slate="true" tw-colors-Orange="true" fonts-family_1="true" fonts-family_4="true"></dmlocked>
 </project>
