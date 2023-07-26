@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="antialiased" lang="en">
     <head>
-        <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
         <link href="https://rsms.me/inter/inter.css" rel="stylesheet" type="text/css">
         <link href="../tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
         <script src="https://cdn.tailwindcss.com/"></script>
@@ -12,11 +11,15 @@
         <nav class="bg-Slate-900 block border-Slate-700 border-b border-solid h-auto sticky text-left top-0 z-50">
             <div class="flex justify-between max-w-8xl mx-auto px-4 py-2 lg:container">
                 <!-- Logo -->
-                <div class="flex place-items-center"><a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_purple_orange.svg" alt="Logo" class="dark:hidden h-12"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-12 hidden"> </a><span class="font-light text-2xl text-Slate-600">/</span><a href="" class="ease-in font-bold hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors"><span>Blog</span></a>
+                <div class="flex place-items-center">
+                    <a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_purple_orange.svg" alt="Logo" class="dark:hidden h-12"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-12 hidden"> </a>
+                    <span class="font-light text-2xl text-Slate-600">/</span>
+                    <a href="" class="ease-in font-bold hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors"><span>Blog</span></a>
                 </div>
                 <div class="flex lg:hidden">
                     <!-- Mobile menu button -->
-                    <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only">Open main menu</span>
+                    <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
                         <!--
             Icon when menu is closed.
 
@@ -38,20 +41,20 @@
                 <!-- Menu -->
                 <div class="absolute bg-white dark:bg-slate-900 h-screen hidden left-0 lg:bg-transparent lg:dark:bg-transparent lg:flex lg:h-auto lg:items-center lg:ml-auto lg:p-0 lg:static p-6 right-0 top-0">
                     <ul class="space-y-6 lg:flex lg:items-center lg:space-y-0">
-                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/quickstarts/">Tutorial</a>
+                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm">
+                            <a href="/docs/quickstarts/">Tutorial</a>
+                        </li>
+                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/quickstarts/">Features</a>
                         </li>
                         <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm">
-                            <a href="/docs/quickstarts/">Features</a>
+                            <a href="/docs/">Comparison</a>
                         </li>
-                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/">Comparison</a>
-                        </li>
-                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:hidden lg:mx-3 lg:text-sm xl:block">
-                            <a href="/docs/">Community</a>
-                        </li>
-                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:hidden lg:mx-3 lg:text-sm xl:block"><a href="/docs/">Article</a>
+                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:hidden lg:mx-3 lg:text-sm xl:block"><a href="/docs/">Community</a>
                         </li>
                         <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:hidden lg:mx-3 lg:text-sm xl:block">
-                            <a href="/docs/">Announement</a>
+                            <a href="/docs/">Article</a>
+                        </li>
+                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:hidden lg:mx-3 lg:text-sm xl:block"><a href="/docs/">Announement</a>
                         </li>
                     </ul>
                     <div class="inline-block relative lg:mx-3 xl:hidden">
@@ -75,26 +78,27 @@
                         </div>
                         <div class="-mt-1 absolute bg-white focus:outline-none origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-xl text-base top-10 w-48 z-10" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                             <div role="none" class="py-2">
-                                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --><a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Community</a><a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Article</a><a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Announcement</a>
+                                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                                <a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Community</a>
+                                <a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Article</a>
+                                <a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-Slate-600 text-gray-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Announcement</a>
                             </div>
                         </div>
                     </div>
-                    <div class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 lg:mx-3 lg:text-sm mx-3 text-base text-white transition-colors"><a href="/download" class="font-bold">Tech Docs</a>
+                    <div class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 lg:mx-3 lg:text-sm mx-3 text-base text-white transition-colors">
+                        <a href="/download" class="font-bold">Tech Docs</a>
                     </div>
                     <button class="bg-Orange-500 font-bold hover:bg-Orange-600 ml-3 px-3 py-2 rounded text-white text-xs tracking-tighter transition-colors uppercase lg:font-extrabold">Talk
                         to an expert
-</button>
-                    <a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-5 lg:w-6">
+</button><a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-5 lg:w-6">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"/>
                                 <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/>
                             </g>
                         </svg></a>
                     <div id="mobile-menu" class="lg:hidden">
-                        <div class="space-y-1 px-2 pb-3 pt-2 bg-gray-900 text-gray-300 hover:bg-gray-700"><a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Dashboard</a>
-                            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-                            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-                            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+                        <div class="space-y-1 px-2 pb-3 pt-2 bg-gray-900 text-gray-300 hover:bg-gray-700">
+                            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Dashboard</a><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
                         </div>
                         <div class="border-t border-gray-700 pb-3 pt-4">
                             <div class="flex items-center px-5">
@@ -105,18 +109,14 @@
                                     <div class="text-base font-medium text-white">Tom Cook</div>
                                     <div class="text-sm font-medium text-gray-400">tom@example.com</div>
                                 </div>
-                                <button type="button" class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                                    <span class="sr-only">View notifications</span>
+                                <button type="button" class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"><span class="sr-only">View notifications</span>
                                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/>
                                     </svg>
                                 </button>
                             </div>
-                            <div class="mt-3 space-y-1 px-2">
-                                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Your
-                                Profile</a>
-                                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Settings</a>
-                                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign
+                            <div class="mt-3 space-y-1 px-2"><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Your
+                                Profile</a><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Settings</a><a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign
                                 out</a>
                             </div>
                         </div>
@@ -127,7 +127,13 @@
             </div>
             <div class="block lg:hidden" id="mobile-menu">
                 <div class="group-hover:duration-200 pb-3 pt-2 px-2 space-y-1">
-                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Tutorials</a><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Features</a><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Comparison</a><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Community</a><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Article</a><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Announcment</a>
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Tutorials</a>
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Features</a>
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Comparison</a>
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Community</a>
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Article</a>
+                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Announcment</a>
                 </div>
             </div>
         </nav>
