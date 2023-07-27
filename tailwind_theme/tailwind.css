@@ -1001,14 +1001,59 @@ select{
 .inline-block{
   display: inline-block;
 }
+.inline{
+  display: inline;
+}
 .flex{
   display: flex;
 }
 .inline-flex{
   display: inline-flex;
 }
+.table{
+  display: table;
+}
+.inline-table{
+  display: inline-table;
+}
+.table-caption{
+  display: table-caption;
+}
+.table-cell{
+  display: table-cell;
+}
+.table-column{
+  display: table-column;
+}
+.table-column-group{
+  display: table-column-group;
+}
+.table-footer-group{
+  display: table-footer-group;
+}
+.table-header-group{
+  display: table-header-group;
+}
+.table-row-group{
+  display: table-row-group;
+}
+.table-row{
+  display: table-row;
+}
+.flow-root{
+  display: flow-root;
+}
 .grid{
   display: grid;
+}
+.inline-grid{
+  display: inline-grid;
+}
+.contents{
+  display: contents;
+}
+.list-item{
+  display: list-item;
 }
 .hidden{
   display: none;
@@ -2275,356 +2320,6 @@ body, html {
 
   .sm\:-ml-9{
     margin-left: -2.25rem;
-  }
-
-
-  .sm\:-ml-3\.5{
-    margin-left: -0.875rem;
-  }
-
-
-  .sm\:-ml-2\.5{
-    margin-left: -0.625rem;
-  }
-
-
-  .sm\:-ml-1\.5{
-    margin-left: -0.375rem;
-  }
-
-
-  .sm\:-ml-0\.5{
-    margin-left: -0.125rem;
-  }
-
-
-  .sm\:-ml-px{
-    margin-left: -1px;
-  }
-
-
-  .sm\:-ml-96{
-    margin-left: -24rem;
-  }
-
-
-  .sm\:-ml-80{
-    margin-left: -20rem;
-  }
-
-
-  .sm\:-ml-72{
-    margin-left: -18rem;
-  }
-
-
-  .sm\:-ml-64{
-    margin-left: -16rem;
-  }
-
-
-  .sm\:-ml-60{
-    margin-left: -15rem;
-  }
-
-
-  .sm\:-ml-56{
-    margin-left: -14rem;
-  }
-
-
-  .sm\:-ml-52{
-    margin-left: -13rem;
-  }
-
-
-  .sm\:-ml-48{
-    margin-left: -12rem;
-  }
-
-
-  .sm\:-ml-44{
-    margin-left: -11rem;
-  }
-
-
-  .sm\:-ml-40{
-    margin-left: -10rem;
-  }
-
-
-  .sm\:-ml-36{
-    margin-left: -9rem;
-  }
-
-
-  .sm\:-ml-32{
-    margin-left: -8rem;
-  }
-
-
-  .sm\:-ml-28{
-    margin-left: -7rem;
-  }
-
-
-  .sm\:-ml-24{
-    margin-left: -6rem;
-  }
-
-
-  .sm\:-ml-20{
-    margin-left: -5rem;
-  }
-
-
-  .sm\:-ml-16{
-    margin-left: -4rem;
-  }
-
-
-  .sm\:-ml-14{
-    margin-left: -3.5rem;
-  }
-
-
-  .sm\:-ml-12{
-    margin-left: -3rem;
-  }
-
-
-  .sm\:-ml-11{
-    margin-left: -2.75rem;
-  }
-
-
-  .sm\:-ml-10{
-    margin-left: -2.5rem;
-  }
-
-
-  .sm\:-ml-8{
-    margin-left: -2rem;
-  }
-
-
-  .sm\:-ml-7{
-    margin-left: -1.75rem;
-  }
-
-
-  .sm\:-ml-6{
-    margin-left: -1.5rem;
-  }
-
-
-  .sm\:-ml-5{
-    margin-left: -1.25rem;
-  }
-
-
-  .sm\:-ml-4{
-    margin-left: -1rem;
-  }
-
-
-  .sm\:-ml-3{
-    margin-left: -0.75rem;
-  }
-
-
-  .sm\:-ml-2{
-    margin-left: -0.5rem;
-  }
-
-
-  .sm\:-ml-1{
-    margin-left: -0.25rem;
-  }
-
-
-  .sm\:-ml-0{
-    margin-left: -0px;
-  }
-
-
-  .sm\:ml-0{
-    margin-left: 0px;
-  }
-
-
-  .sm\:ml-1{
-    margin-left: 0.25rem;
-  }
-
-
-  .sm\:ml-2{
-    margin-left: 0.5rem;
-  }
-
-
-  .sm\:ml-3{
-    margin-left: 0.75rem;
-  }
-
-
-  .sm\:ml-4{
-    margin-left: 1rem;
-  }
-
-
-  .sm\:ml-5{
-    margin-left: 1.25rem;
-  }
-
-
-  .sm\:ml-6{
-    margin-left: 1.5rem;
-  }
-
-
-  .sm\:ml-7{
-    margin-left: 1.75rem;
-  }
-
-
-  .sm\:ml-8{
-    margin-left: 2rem;
-  }
-
-
-  .sm\:ml-9{
-    margin-left: 2.25rem;
-  }
-
-
-  .sm\:ml-10{
-    margin-left: 2.5rem;
-  }
-
-
-  .sm\:ml-11{
-    margin-left: 2.75rem;
-  }
-
-
-  .sm\:ml-12{
-    margin-left: 3rem;
-  }
-
-
-  .sm\:ml-14{
-    margin-left: 3.5rem;
-  }
-
-
-  .sm\:ml-16{
-    margin-left: 4rem;
-  }
-
-
-  .sm\:ml-20{
-    margin-left: 5rem;
-  }
-
-
-  .sm\:ml-24{
-    margin-left: 6rem;
-  }
-
-
-  .sm\:ml-28{
-    margin-left: 7rem;
-  }
-
-
-  .sm\:ml-32{
-    margin-left: 8rem;
-  }
-
-
-  .sm\:ml-36{
-    margin-left: 9rem;
-  }
-
-
-  .sm\:ml-40{
-    margin-left: 10rem;
-  }
-
-
-  .sm\:ml-44{
-    margin-left: 11rem;
-  }
-
-
-  .sm\:ml-48{
-    margin-left: 12rem;
-  }
-
-
-  .sm\:ml-52{
-    margin-left: 13rem;
-  }
-
-
-  .sm\:ml-56{
-    margin-left: 14rem;
-  }
-
-
-  .sm\:ml-60{
-    margin-left: 15rem;
-  }
-
-
-  .sm\:ml-64{
-    margin-left: 16rem;
-  }
-
-
-  .sm\:ml-72{
-    margin-left: 18rem;
-  }
-
-
-  .sm\:ml-80{
-    margin-left: 20rem;
-  }
-
-
-  .sm\:ml-96{
-    margin-left: 24rem;
-  }
-
-
-  .sm\:ml-auto{
-    margin-left: auto;
-  }
-
-
-  .sm\:ml-px{
-    margin-left: 1px;
-  }
-
-
-  .sm\:ml-0\.5{
-    margin-left: 0.125rem;
-  }
-
-
-  .sm\:ml-1\.5{
-    margin-left: 0.375rem;
-  }
-
-
-  .sm\:ml-2\.5{
-    margin-left: 0.625rem;
-  }
-
-
-  .sm\:ml-3\.5{
-    margin-left: 0.875rem;
   }
 
 
