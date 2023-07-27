@@ -1334,9 +1334,6 @@ select{
 .border-4{
   border-width: 4px;
 }
-.border-8{
-  border-width: 8px;
-}
 .border-b{
   border-bottom-width: 1px;
 }
@@ -1767,6 +1764,15 @@ select{
 }
 .font-normal{
   font-weight: 400;
+}
+.font-thin{
+  font-weight: 100;
+}
+.font-extralight{
+  font-weight: 200;
+}
+.font-black{
+  font-weight: 900;
 }
 .uppercase{
   text-transform: uppercase;
