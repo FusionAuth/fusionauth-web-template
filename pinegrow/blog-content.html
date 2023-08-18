@@ -12,18 +12,19 @@
         <nav class="bg-slate-900 block border-b border-slate-700 border-solid h-auto sticky text-left top-0 z-50 xl:shadow-lg" id="updated">
             <div class="flex justify-between max-w-8xl mx-auto px-4 py-2 lg:container">
                 <!-- Logo -->
-                <div class="flex place-items-center"><a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_purple_orange.svg" alt="Logo" class="dark:hidden h-12 hidden"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-12"> </a><span class="font-light text-2xl text-slate-500">/</span><a href="" class="ease-in font-bold hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors"><span>Blog</span></a>
+                <div class="flex place-items-center">
+                    <a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_purple_orange.svg" alt="Logo" class="dark:hidden h-12 hidden"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-12"> </a>
+                    <span class="font-light text-2xl text-slate-500">/</span>
+                    <a href="" class="ease-in font-bold hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors"><span>Blog</span></a>
                 </div>
                 <div class="flex items-center lg:hidden">
-                    <!-- Mobile menu button -->
-                    <a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-6">
+                    <!-- Mobile menu button --><a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-6">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"/>
                                 <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/>
                             </g>
                         </svg></a>
-                    <button type="button" class="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white hover:bg-gray-700 hover:text-white inline-flex items-center justify-center p-2 rounded-md text-gray-400" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
+                    <button type="button" class="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white hover:bg-gray-700 hover:text-white inline-flex items-center justify-center p-2 rounded-md text-gray-400" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only">Open main menu</span>
                         <!--
             Icon when menu is closed.
 
@@ -45,20 +46,20 @@
                 <!-- Menu -->
                 <div class="absolute bg-white dark:bg-slate-900 h-screen hidden left-0 lg:bg-transparent lg:dark:bg-transparent lg:flex lg:h-auto lg:items-center lg:ml-auto lg:p-0 lg:static p-6 right-0 top-0">
                     <ul class="space-y-6 lg:flex lg:items-center lg:space-y-0">
-                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/quickstarts/">Tutorial</a>
+                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm">
+                            <a href="/docs/quickstarts/">Tutorial</a>
+                        </li>
+                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/quickstarts/">Features</a>
                         </li>
                         <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm">
-                            <a href="/docs/quickstarts/">Features</a>
+                            <a href="/docs/">Comparison</a>
                         </li>
-                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/">Comparison</a>
-                        </li>
-                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:hidden lg:mx-3 lg:text-sm xl:block">
-                            <a href="/docs/">Community</a>
-                        </li>
-                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:hidden lg:mx-3 lg:text-sm xl:block"><a href="/docs/">Article</a>
+                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:hidden lg:mx-3 lg:text-sm xl:block"><a href="/docs/">Community</a>
                         </li>
                         <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:hidden lg:mx-3 lg:text-sm xl:block">
-                            <a href="/docs/">Announement</a>
+                            <a href="/docs/">Article</a>
+                        </li>
+                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:hidden lg:mx-3 lg:text-sm xl:block"><a href="/docs/">Announement</a>
                         </li>
                     </ul>
                     <div class="inline-block relative lg:mx-3 xl:hidden">
@@ -82,15 +83,20 @@
                         </div>
                         <div class="-mt-1 absolute bg-white focus:outline-none origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-xl text-base top-10 w-48 z-10" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                             <div role="none" class="py-2">
-                                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --><a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Community</a><a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Article</a><a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Announcement</a>
+                                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                                <a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Community</a>
+                                <a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Article</a>
+                                <a href="#" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Announcement</a>
                             </div>
                         </div>
                     </div>
-                    <div class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 lg:mx-3 lg:text-sm mx-3 text-base text-white transition-colors"><a href="/download" class="font-bold">Tech Docs</a>
+                    <div class="dark:hover:text-indigo-500 ease-in font-medium hover:text-indigo-600 lg:mx-3 lg:text-sm mx-3 text-base text-white transition-colors">
+                        <a href="/download" class="font-bold">Tech Docs</a>
                     </div>
                     <button class="bg-Orange-500 bg-orange-500 font-extrabold hover:bg-Orange-600 hover:bg-orange-600 ml-3 px-3 py-2 rounded text-white text-xs tracking-tighter transition-colors uppercase lg:font-extrabold">Talk
                         to an expert
-</button><a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-5 lg:w-6">
+</button>
+                    <a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-5 lg:w-6">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"/>
                                 <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/>
@@ -102,9 +108,14 @@
             </div>
             <div class="block md:shadow-md lg:hidden" id="mobile-menu">
                 <div class="group-hover:duration-200 p-2 shadow-2xl space-y-1">
-                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Tutorials</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Features</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Comparison</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Community</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Articles</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors pb-4 pt-2 px-3 rounded-md text-base text-white">Announcement</a>
-                    <hr class="border-slate-700 border-t-2 h-px my-12"/>
-                    <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Talk To An Expert</a>
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Tutorials</a>
+                    <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Features</a>
+                    <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Comparison</a>
+                    <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Community</a>
+                    <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Articles</a>
+                    <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors pb-4 pt-2 px-3 rounded-md text-base text-white">Announcement</a>
+                    <hr class="border-slate-700 border-t-2 h-px my-12"/><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Talk To An Expert</a>
                 </div>
             </div>
         </nav>
@@ -113,7 +124,9 @@
         <section id="hero" class="bg-slate-900 flex h-auto justify-center place-self-center relative lg:pt-10 2xl:pt-14">
             <div class="flex flex-col max-w-8xl mx-auto pt-2 px-6 relative lg:mx-auto lg:w-5/6 xl:container xl:w-4/6 2xl:ml-auto 2xl:px-20 2xl:w-7/12" id="responsive-container">
                 <div class="mb-10 mt-7 md:pr-40 lg:pr-48">
-                    <ul class="capitalize font-bold inline-block mb-3 text-base text-indigo-500"><a href=""><li class="inline-block mr-3">Tutorials</li></a><a href=""><li class="inline-block mr-3">Features</li></a>
+                    <ul class="capitalize font-bold inline-block mb-3 text-base text-indigo-500">
+                        <a href=""><li class="inline-block mr-3">Tutorials</li></a>
+                        <a href=""><li class="inline-block mr-3">Features</li></a>
                     </ul>
                     <h1 class="capitalize font-extrabold leading-8 mb-3 text-3xl text-white lg:mb-3 lg:text-4xl xl:mb-4 xl:text-4xl 2xl:text-5xl">How to use OAuth to Add Authentication to Your React App</h1>
                     <p class="font-medium leading-5 mb-1 text-slate-400 lg:font-medium">Happy world password day! This is a great day to change your passwords on important accounts such as banking, email or social media systems.</p>
@@ -126,13 +139,19 @@
         </section>
         <section id="author" class="mt-5">
             <div class="flex flex-col max-w-8xl mx-auto px-6 relative lg:mx-auto lg:w-5/6 xl:container xl:w-4/6 2xl:ml-auto 2xl:px-20 2xl:w-7/12" id="responsive-container">
-                <div id="social" class="flex justify-end self-start w-full md:flex lg:flex lg:self-start"><a href="" class="mr-3"><img src="../assets/blog/social/twitter.svg" class="pr-0 w-9 md:w-11 lg:pr-0 lg:w-9"></a><a href="" class="mr-3"><img src="../assets/blog/social/linkedin.svg" class="pr-0 w-9 md:w-11 lg:pr-0 lg:w-9"></a><a href="" class="mr-3"><img src="../assets/blog/social/reddit.svg" class="pr-0 w-9 md:w-11 lg:pr-0 lg:w-9"></a><a href="" class="mr-3"><img src="../assets/blog/social/hacker-news.svg" class="pr-0 w-9 md:w-11 lg:pr-0 lg:w-9"></a>
+                <div id="social" class="flex justify-end self-start w-full md:flex lg:flex lg:self-start">
+                    <a href="" class="mr-3"><img src="../assets/blog/social/twitter.svg" class="pr-0 w-9 md:w-11 lg:pr-0 lg:w-9"></a>
+                    <a href="" class="mr-3"><img src="../assets/blog/social/linkedin.svg" class="pr-0 w-9 md:w-11 lg:pr-0 lg:w-9"></a>
+                    <a href="" class="mr-3"><img src="../assets/blog/social/reddit.svg" class="pr-0 w-9 md:w-11 lg:pr-0 lg:w-9"></a>
+                    <a href="" class="mr-3"><img src="../assets/blog/social/hacker-news.svg" class="pr-0 w-9 md:w-11 lg:pr-0 lg:w-9"></a>
                 </div>
                 <div>
                     <p class="font-mono mb-1 text-base text-slate-500">Authors</p>
                 </div>
                 <div class="flex flex-row items-start justify-between mb-3">
-                    <div class="flex flex-col sm:flex-row"><a href="" class="font-bold hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Dan Moore</div></a><a href="" class="font-bold hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mb-2 mr-4 sm:leading-tight">Sean Bryant</div></a>
+                    <div class="flex flex-col sm:flex-row">
+                        <a href="" class="font-bold hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Dan Moore</div></a>
+                        <a href="" class="font-bold hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mb-2 mr-4 sm:leading-tight">Sean Bryant</div></a>
                     </div>
                     <div>
                         <div class="border-slate-400 border-solid flex flex-row px-3">
@@ -145,11 +164,11 @@
             </div>
         </section>
         <section id="blog-content">
-            <div class="max-w-8xl mx-auto pt-2 px-6 lg:pr-0 lg:w-10/12 xl:pl-32 xl:w-10/12 2xl:mx-auto 2xl:pl-40 2xl:pr-0 2xl:w-8/12" id="responsive-container">
+            <div class="max-w-8xl mx-auto pt-2 px-6 lg:pl-28 lg:pr-6 xl:mx-auto xl:pl-60 2xl:ml-6 2xl:pl-96" id="responsive-container">
                 <div class="mt-4">
                     <div class="md:flex md:flex-col md:justify-start lg:flex-row lg:self-start">
-                        <div id="content" class="mb-16 md:basis-full md:mr-10 md:w-full lg:w-4/6 xl:mr-0 2xl:mr-12">
-                            <main class="xl:pr-5 2xl:pr-0">
+                        <div id="content" class="mb-16 md:basis-full md:w-full lg:flex lg:pr-5 xl:mr-0 2xl:mr-12">
+                            <main>
                                 <p class="font-Inter leading-6 sm:text-base md:leading-7 md:text-lg">Whenever you build a website that allows a user to create their own account, secure authentication and authorization is a must-have. The problem is that most handmade authentication and authorization solutions are not robust enough to keep up with the most current and secure workflows. What&apos;s more, since security is not always seen as a business priority, in-house authorization solutions can quickly become an internal tool that is not often touched, prone to disrepair and exploitation by bad actors.</p>
                                 <p class="font-Inter leading-6 mt-5 sm:text-base md:leading-7 md:text-lg">Whenever you build a website that allows a user to create their own account, secure authentication and authorization is a must-have. The problem is that most handmade authentication and authorization solutions are not robust enough to keep up with the most current and secure workflows. What&apos;s more, since security is not always seen as a business priority, in-house authorization solutions can quickly become an internal tool that is not often touched, prone to disrepair and exploitation by bad actors.</p>
                                 <h2 class="font-bold leading-6 mb-5 mt-7 text-slate-800 text-xl md:font-Inter md:font-bold md:leading-7 md:text-2xl" id="blog-h2">The FusionAuth Newsletter</h2>
@@ -157,13 +176,12 @@
                                 <h3 class="font-bold leading-6 mb-3 mt-5 text-lg text-slate-800 md:font-Inter md:font-bold md:leading-7 md:text-xl" id="blog-h2">The FusionAuth Newsletter</h3>
                                 <p class="font-Inter leading-6 sm:text-base md:leading-7 md:text-lg">Choosing a<a href="#" id="blog-link" class="hover:decoration-auto hover:underline hover:underline-offset-2 text-indigo-600"> good password as well as enabling multi-factor authentication</a> will ensure that your data remains secure.</p>
                                 <ul class="font-Inter leading-6 list-disc list-inside my-3 sm:my-6 sm:text-base md:leading-7 md:ml-5 md:text-lg">
-                                    <li class="mb-3">
-                                        <b>Lorem ipsum dolor sit amet</b>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    </li>
                                     <li class="mb-3"><b>Lorem ipsum dolor sit amet</b>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     </li>
                                     <li class="mb-3">
                                         <b>Lorem ipsum dolor sit amet</b>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                    </li>
+                                    <li class="mb-3"><b>Lorem ipsum dolor sit amet</b>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     </li>
                                 </ul>
                                 <h4 class="font-bold leading-5 mb-2 mt-5 text-base text-slate-800 md:font-Inter md:font-bold md:leading-7 md:text-lg" id="blog-h2">The FusionAuth Newsletter</h4>
@@ -173,22 +191,16 @@
                                 <img src="../assets/blog/screenshots/image6-2.png">
                                 <aside class="bg-slate-100 border-indigo-500 border-t-4 my-10 pb-8 pt-6 px-7 sm:my-7" id="callout-cta">
                                     <p class="font-bold leading-6 mb-3 text-lg text-slate-800 md:font-Inter md:font-bold md:leading-7 md:text-xl">Want to Become an Auth Badass</p>
-                                    <p class="font-Inter font-medium leading-6 text-base text-slate-600 md:leading-normal md:text-base">Buy FusionAuth today and save the planet by decreasing the amount of spam email you&rsquo;ll recieve from other wantabees&hellip;</p>
-                                    <a href="#" id="blog-cta-link" class="block font-semibold hover:decoration-1 hover:underline hover:underline-offset-2 mt-8 text-indigo-600">Buy FusionAuth Now</a>
+                                    <p class="font-Inter font-medium leading-6 text-base text-slate-600 md:leading-normal md:text-base">Buy FusionAuth today and save the planet by decreasing the amount of spam email you&rsquo;ll recieve from other wantabees&hellip;</p><a href="#" id="blog-cta-link" class="block font-semibold hover:decoration-1 hover:underline hover:underline-offset-2 mt-8 text-indigo-600">Buy FusionAuth Now</a>
                                 </aside>
                                 <h2 class="font-bold leading-6 mb-5 mt-10 text-slate-800 text-xl md:font-Inter md:font-bold md:leading-7 md:text-2xl" id="blog-h2">Conclusion</h2>
                                 <p class="font-Inter leading-6 sm:text-base md:leading-7 md:text-lg">Happy world password day! This is a great day to change your passwords on important accounts such as banking, email or social media systems.</p>
                                 <div id="blog-tags" class="mt-14">
                                     <div data-empty-placeholder class="bg-indigo-500 block h-2 mb-4 min-h-full w-10"></div>
-                                    <div class="flex font-mono justify-start">
-                                        <span class="mt-1 text-base">Tags:</span>
-                                        <ul class="flex-wrap inline-flex items-center ml-4 self-start md:ml-12 lg:ml-12">
-                                            <a href="" class="hover:decoration-auto hover:underline hover:underline-offset-2 inline-block mt-1 text-indigo-600"><li class="text-base">Authentication</li></a>
+                                    <div class="flex font-mono justify-start"><span class="mt-1 text-base">Tags:</span>
+                                        <ul class="flex-wrap inline-flex items-center ml-4 self-start md:ml-12 lg:ml-12"><a href="" class="hover:decoration-auto hover:underline hover:underline-offset-2 inline-block mt-1 text-indigo-600"><li class="text-base">Authentication</li></a><span class="mr-1">,</span><a href="" class="hover:decoration-auto hover:underline hover:underline-offset-2 inline-block mt-1 text-indigo-600"><li class="text-base">Authorization</li></a><span class="mr-1">,</span><a href="" class="hover:decoration-auto hover:underline hover:underline-offset-2 inline-block mt-1 text-indigo-600"><li class="text-base">Security</li></a>
+                                            <span class="mr-1">,</span><a href="" class="hover:decoration-auto hover:underline hover:underline-offset-2 inline-block mt-1 text-indigo-600"><li class="text-base">Your Mom</li></a>
                                             <span class="mr-1">,</span>
-                                            <a href="" class="hover:decoration-auto hover:underline hover:underline-offset-2 inline-block mt-1 text-indigo-600"><li class="text-base">Authorization</li></a>
-                                            <span class="mr-1">,</span>
-                                            <a href="" class="hover:decoration-auto hover:underline hover:underline-offset-2 inline-block mt-1 text-indigo-600"><li class="text-base">Security</li></a><span class="mr-1">,</span>
-                                            <a href="" class="hover:decoration-auto hover:underline hover:underline-offset-2 inline-block mt-1 text-indigo-600"><li class="text-base">Your Mom</li></a><span class="mr-1">,</span>
                                         </ul>
                                     </div>
                                     <div id="published-date" class="2xl:inline-block">
@@ -197,7 +209,7 @@
                                 </div>
                             </main>
                         </div>
-                        <div id="blog-sidebar" class="block sm:block md:block lg:w-2/6 xl:relative xl:w-2/5 2xl:-mr-16 2xl:w-2/6">
+                        <div id="blog-sidebar" class="block sm:block md:block lg:flex lg:flex-col lg:w-72 xl:relative xl:w-4/12 2xl:w-4/12">
                             <div class="hidden mb-10 lg:block">
                                 <h2 class="font-bold mb-3 text-slate-800 text-xl md:font-Inter md:font-bold md:leading-tight md:text-xl">The FusionAuth Newsletter</h2>
                                 <hr class="bg-slate-200 border-t-0 h-0.5 mb-2"/>
@@ -210,26 +222,24 @@
                             <div>
                                 <h2 class="font-bold mb-3 text-slate-800 text-xl md:font-Inter md:font-bold md:leading-tight md:text-xl">More on tutorials</h2>
                             </div>
-                            <article class="border-slate-200 border-solid border-t-2 flex flex-col py-6" id="sidebar-content"><a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-orange.svg"></a>
+                            <article class="border-slate-200 border-solid border-t-2 flex flex-col py-6" id="sidebar-content">
+                                <a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-orange.svg"></a>
+                                <h3 class="font-bold leading-6 mb-3 normal-case text-lg text-slate-800 md:font-Inter md:font-bold md:leading-7 md:text-xl lg:leading-6" id="blog-h3-sidebar"><a href="" class="hover:decoration-1 hover:text-indigo-600 hover:underline hover:underline-offset-2">The FusionAuth Newsletter</a></h3>
+                                <p class="font-Inter leading-6 text-slate-600 sm:text-base md:leading-7 md:text-lg lg:text-base">Whenever you build a website that allows a user to create their own account, secure authentication and authorization is a must-have.&nbsp;</p>
+                                <div class="flex flex-col mt-4 sm:flex-row">
+                                    <a href="" class="font-bold hover:decoration-1 hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Dan Moore</div></a>
+                                </div>
+                            </article>
+                            <article class="border-slate-200 border-solid border-t-2 flex flex-col pb-6 pt-2" id="sidebar-content"><a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-orange.svg" class="hidden"></a>
                                 <h3 class="font-bold leading-6 mb-3 normal-case text-lg text-slate-800 md:font-Inter md:font-bold md:leading-7 md:text-xl lg:leading-6" id="blog-h3-sidebar"><a href="" class="hover:decoration-1 hover:text-indigo-600 hover:underline hover:underline-offset-2">The FusionAuth Newsletter</a></h3>
                                 <p class="font-Inter leading-6 text-slate-600 sm:text-base md:leading-7 md:text-lg lg:text-base">Whenever you build a website that allows a user to create their own account, secure authentication and authorization is a must-have.&nbsp;</p>
                                 <div class="flex flex-col mt-4 sm:flex-row"><a href="" class="font-bold hover:decoration-1 hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Dan Moore</div></a>
                                 </div>
                             </article>
-                            <article class="border-slate-200 border-solid border-t-2 flex flex-col pb-6 pt-2" id="sidebar-content">
-                                <a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-orange.svg" class="hidden"></a>
+                            <article class="border-slate-200 border-solid border-t-2 flex flex-col pb-6 pt-2" id="sidebar-content"><a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-orange.svg" class="hidden"></a>
                                 <h3 class="font-bold leading-6 mb-3 normal-case text-lg text-slate-800 md:font-Inter md:font-bold md:leading-7 md:text-xl lg:leading-6" id="blog-h3-sidebar"><a href="" class="hover:decoration-1 hover:text-indigo-600 hover:underline hover:underline-offset-2">The FusionAuth Newsletter</a></h3>
                                 <p class="font-Inter leading-6 text-slate-600 sm:text-base md:leading-7 md:text-lg lg:text-base">Whenever you build a website that allows a user to create their own account, secure authentication and authorization is a must-have.&nbsp;</p>
-                                <div class="flex flex-col mt-4 sm:flex-row">
-                                    <a href="" class="font-bold hover:decoration-1 hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Dan Moore</div></a>
-                                </div>
-                            </article>
-                            <article class="border-slate-200 border-solid border-t-2 flex flex-col pb-6 pt-2" id="sidebar-content">
-                                <a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-orange.svg" class="hidden"></a>
-                                <h3 class="font-bold leading-6 mb-3 normal-case text-lg text-slate-800 md:font-Inter md:font-bold md:leading-7 md:text-xl lg:leading-6" id="blog-h3-sidebar"><a href="" class="hover:decoration-1 hover:text-indigo-600 hover:underline hover:underline-offset-2">The FusionAuth Newsletter</a></h3>
-                                <p class="font-Inter leading-6 text-slate-600 sm:text-base md:leading-7 md:text-lg lg:text-base">Whenever you build a website that allows a user to create their own account, secure authentication and authorization is a must-have.&nbsp;</p>
-                                <div class="flex flex-col mt-4 sm:flex-row">
-                                    <a href="" class="font-bold hover:decoration-1 hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Dan Moore</div></a>
+                                <div class="flex flex-col mt-4 sm:flex-row"><a href="" class="font-bold hover:decoration-1 hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Dan Moore</div></a>
                                 </div>
                             </article>
                         </div>
@@ -243,32 +253,33 @@
                 <hr class="bg-slate-200 border-t-0 h-0.5"/>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <article class="flex flex-col py-6 md:px-4">
-                    <a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-orange.svg"></a>
-                    <div><a href=""><li class="mr-3 capitalize font-bold inline-block mb-3 text-base text-indigo-500">Tutorials</li></a>
+                <article class="flex flex-col py-6 md:px-4"><a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-orange.svg"></a>
+                    <div>
+                        <a href=""><li class="mr-3 capitalize font-bold inline-block mb-3 text-base text-indigo-500">Tutorials</li></a>
                     </div>
                     <h3 class="font-bold leading-6 mb-3 normal-case text-lg text-slate-800 md:font-Inter md:font-bold md:leading-7 md:text-xl" id="blog-h2"><a href="" class="hover:text-indigo-600 hover:underline hover:underline-offset-2">The FusionAuth Newsletter</a></h3>
                     <p class="font-Inter leading-6 text-slate-600 sm:text-base md:leading-6 md:text-base">Whenever you build a website that allows a user to create their own account, secure authentication and authorization is a must-have.&nbsp;</p>
-                    <div class="flex flex-col mt-4 sm:flex-row">
-                        <a href="" class="font-bold hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Dan Moore</div></a>
+                    <div class="flex flex-col mt-4 sm:flex-row"><a href="" class="font-bold hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Dan Moore</div></a>
                     </div>
                 </article>
-                <article class="flex flex-col py-6 md:px-4"><a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-purple.svg" class="hover:transform"></a>
-                    <div>
-                        <a href=""><li class="mr-3 capitalize font-bold inline-block mb-3 text-base text-indigo-500">Features</li></a>
+                <article class="flex flex-col py-6 md:px-4">
+                    <a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-purple.svg" class="hover:transform"></a>
+                    <div><a href=""><li class="mr-3 capitalize font-bold inline-block mb-3 text-base text-indigo-500">Features</li></a>
                     </div>
                     <h3 class="font-bold leading-6 mb-3 normal-case text-lg text-slate-800 md:font-Inter md:font-bold md:leading-7 md:text-xl" id="blog-h2"><a href="" class="hover:text-indigo-600 hover:underline hover:underline-offset-2">Security alert: social engineering campaign targets technology industry employees</a></h3>
                     <p class="font-Inter leading-6 text-slate-600 sm:text-base md:leading-6 md:text-base">Whenever you build a website that allows a user to create their own account, secure authentication and authorization is a must-have.&nbsp;</p>
-                    <div class="flex flex-col mt-4 sm:flex-row"><a href="" class="font-bold hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Sean Bryant</div></a>
+                    <div class="flex flex-col mt-4 sm:flex-row">
+                        <a href="" class="font-bold hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Sean Bryant</div></a>
                     </div>
                 </article>
-                <article class="flex flex-col py-6 md:px-4"><a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-gradient.svg" class="hover:transform"></a>
-                    <div>
-                        <a href=""><li class="mr-3 capitalize font-bold inline-block mb-3 text-base text-indigo-500">Community</li></a>
+                <article class="flex flex-col py-6 md:px-4">
+                    <a href="" class="mb-5"><img src="../assets/blog/recent-posts/recent-gradient.svg" class="hover:transform"></a>
+                    <div><a href=""><li class="mr-3 capitalize font-bold inline-block mb-3 text-base text-indigo-500">Community</li></a>
                     </div>
                     <h3 class="font-bold leading-6 mb-3 normal-case text-lg text-slate-800 md:font-Inter md:font-bold md:leading-7 md:text-xl" id="blog-h2"><a href="" class="hover:text-indigo-600 hover:underline hover:underline-offset-2">A developer&rsquo;s guide to prompt engineering and LLMs</a></h3>
                     <p class="font-Inter leading-6 text-slate-600 sm:text-base md:leading-6 md:text-base">Whenever you build a website that allows a user to create their own account, secure authentication and authorization is a must-have.&nbsp;</p>
-                    <div class="flex flex-col mt-4 sm:flex-row"><a href="" class="font-bold hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Matt Hathcock</div></a>
+                    <div class="flex flex-col mt-4 sm:flex-row">
+                        <a href="" class="font-bold hover:text-indigo-600 hover:underline hover:underline-offset-2 text-base text-slate-800"><div class="leading-tight mr-4 sm:leading-tight">Matt Hathcock</div></a>
                     </div>
                 </article>
             </div>
@@ -297,63 +308,69 @@
                     <div class="mb-7 md:mb-0">
                         <h4 class="font-semibold mb-3 text-sm text-white uppercase">Get Started</h4>
                         <ul class="capitalize font-medium text-slate-400 text-sm">
-                            <li class="mb-3"><a href="https://fusionauth.io/docs/v1/tech/installation-guide/docker" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">download locally</a>
+                            <li class="mb-3">
+                                <a href="https://fusionauth.io/docs/v1/tech/installation-guide/docker" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">download locally</a>
                             </li>
-                            <li class="mb-3"><a href="https://fusionauth.io/pricing?step=plan&hosting=basic-cloud" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">run in cloud</a>
+                            <li class="mb-3">
+                                <a href="https://fusionauth.io/pricing?step=plan&hosting=basic-cloud" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">run in cloud</a>
                             </li>
-                            <li class="mb-3"><a href="https://fusionauth.io/docs/quickstarts/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">quickstarts</a>
+                            <li class="mb-3">
+                                <a href="https://fusionauth.io/docs/quickstarts/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">quickstarts</a>
                             </li>
-                            <li class="mb-3"><a href="https://fusionauth.io/docs/v1/tech/tutorials/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Tutorials</a>
+                            <li class="mb-3">
+                                <a href="https://fusionauth.io/docs/v1/tech/tutorials/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Tutorials</a>
                             </li>
                         </ul>
                     </div>
                     <div class="mb-7 md:mb-0">
                         <h4 class="font-semibold mb-3 text-sm text-white uppercase">product</h4>
                         <ul class="capitalize font-medium text-slate-400 text-sm">
-                            <li class="mb-3"><a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">features</a>
-                            </li>
                             <li class="mb-3">
-                                <a href="https://fusionauth.io/pricing" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">pricing</a>
+                                <a href="#" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">features</a>
+                            </li>
+                            <li class="mb-3"><a href="https://fusionauth.io/pricing" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">pricing</a>
                             </li>
                         </ul>
                     </div>
                     <div class="mb-7 md:mb-0">
                         <h4 class="font-semibold mb-3 text-sm text-white uppercase">developers</h4>
                         <ul class="capitalize font-medium text-slate-400 text-sm">
-                            <li class="mb-3">
-                                <a href="https://fusionauth.io/docs/v1/tech/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">SDKs</a>
-                            </li>
-                            <li class="mb-3"><a href="https://fusionauth.io/docs/v1/tech/apis/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">API Docs</a>
+                            <li class="mb-3"><a href="https://fusionauth.io/docs/v1/tech/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">SDKs</a>
                             </li>
                             <li class="mb-3">
-                                <a href="https://fusionauth.io/docs/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Documentation</a>
+                                <a href="https://fusionauth.io/docs/v1/tech/apis/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">API Docs</a>
                             </li>
-                            <li class="mb-3">
-                                <a href="https://fusionauth.io/docs/v1/tech/release-notes" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Release Notes</a>
+                            <li class="mb-3"><a href="https://fusionauth.io/docs/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Documentation</a>
+                            </li>
+                            <li class="mb-3"><a href="https://fusionauth.io/docs/v1/tech/release-notes" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">Release Notes</a>
                             </li>
                         </ul>
                     </div>
                     <div class="mb-7 md:mb-0">
                         <h4 class="font-semibold mb-3 text-sm text-white uppercase">resources</h4>
                         <ul class="capitalize font-medium text-slate-400 text-sm">
-                            <li class="mb-3"><a href="https://fusionauth.io/community/forum/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">support forum</a>
+                            <li class="mb-3">
+                                <a href="https://fusionauth.io/community/forum/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">support forum</a>
                             </li>
-                            <li class="mb-3"><a href="https://join.slack.com/t/fusionauth/shared_invite/zt-6ykfov9u-MTwA1A6ptv0Gr6KcFBVG4w" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">slack community</a>
+                            <li class="mb-3">
+                                <a href="https://join.slack.com/t/fusionauth/shared_invite/zt-6ykfov9u-MTwA1A6ptv0Gr6KcFBVG4w" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">slack community</a>
                             </li>
-                            <li class="mb-3"><a href="https://fusionauth.io/blog/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">blogs</a>
+                            <li class="mb-3">
+                                <a href="https://fusionauth.io/blog/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">blogs</a>
                             </li>
-                            <li class="mb-3"><a href="https://fusionauth.io/articles/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">articles</a>
+                            <li class="mb-3">
+                                <a href="https://fusionauth.io/articles/" class="hover:duration-200 hover:ease-in-out hover:text-indigo-500 hover:transition-colors">articles</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="container inline-flex items-center justify-center mb-10 mt-2 mx-auto space-x-5 lg:justify-end lg:mb-7 lg:pr-9 xl:pr-20 2xl:justify-end">
-                    <a href="https://github.com/FusionAuth"> <img src="../assets/footer/github.svg" class="w-5" alt="FusionAuth Github"></a><a href="https://fusionauth.slack.com/join/shared_invite/zt-6ykfov9u-MTwA1A6ptv0Gr6KcFBVG4w#/shared-invite/email"> <img src="../assets/footer/slack.svg" class="w-5" alt="FusionAuth Slack Community"></a><a href="https://twitter.com/fusionauth"> <img src="../assets/footer/twitter.svg" class="w-5" href alt="FusionAuth Twitter"></a>
-                    <a href="https://www.linkedin.com/company/fusionauth/"> <img src="../assets/footer/linkedin.svg" class="w-5" href alt="FusionAuth LinkedIn"></a><a href="https://www.youtube.com/@FusionAuth"> <img src="../assets/footer/youtube.svg" class="w-5" alt="FusionAuth Youtube"></a><a href="https://dev.to/fusionauth"> <img src="../assets/footer/dev.svg" class="w-5" alt="FusionAuth Dev.to"></a>
+                <div class="container inline-flex items-center justify-center mb-10 mt-2 mx-auto space-x-5 lg:justify-end lg:mb-7 lg:pr-9 xl:pr-20 2xl:justify-end"><a href="https://github.com/FusionAuth"> <img src="../assets/footer/github.svg" class="w-5" alt="FusionAuth Github"></a>
+                    <a href="https://fusionauth.slack.com/join/shared_invite/zt-6ykfov9u-MTwA1A6ptv0Gr6KcFBVG4w#/shared-invite/email"> <img src="../assets/footer/slack.svg" class="w-5" alt="FusionAuth Slack Community"></a>
+                    <a href="https://twitter.com/fusionauth"> <img src="../assets/footer/twitter.svg" class="w-5" href alt="FusionAuth Twitter"></a><a href="https://www.linkedin.com/company/fusionauth/"> <img src="../assets/footer/linkedin.svg" class="w-5" href alt="FusionAuth LinkedIn"></a>
+                    <a href="https://www.youtube.com/@FusionAuth"> <img src="../assets/footer/youtube.svg" class="w-5" alt="FusionAuth Youtube"></a>
+                    <a href="https://dev.to/fusionauth"> <img src="../assets/footer/dev.svg" class="w-5" alt="FusionAuth Dev.to"></a>
                 </div>
-                <div class="border-slate-400 border-t container flex flex-wrap justify-center mx-auto px-4 py-6 md:flex md:items-center md:justify-center lg:justify-between">
-                    <span class="dark:text-gray-300 font-medium mb-4 text-gray-500 text-sm sm:text-center lg:mb-0">&copy; 2023 FusionAuth, Inc. All Rights Reserved.</span>
-                    <span class="font-normal text-center text-slate-300 text-xs sm:text-center md:text-center"><a href="https://fusionauth.io/license" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">License </a>&bull;<a href="https://fusionauth.io/license-faq" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">License FAQ</a>&nbsp;&bull;<a href="https://fusionauth.io/privacy-policy" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">Privacy</a>
+                <div class="border-slate-400 border-t container flex flex-wrap justify-center mx-auto px-4 py-6 md:flex md:items-center md:justify-center lg:justify-between"><span class="dark:text-gray-300 font-medium mb-4 text-gray-500 text-sm sm:text-center lg:mb-0">&copy; 2023 FusionAuth, Inc. All Rights Reserved.</span><span class="font-normal text-center text-slate-300 text-xs sm:text-center md:text-center"><a href="https://fusionauth.io/license" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">License </a>&bull;<a href="https://fusionauth.io/license-faq" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">License FAQ</a>&nbsp;&bull;<a href="https://fusionauth.io/privacy-policy" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">Privacy</a>
 &bull;<a href="https://fusionauth.io/product-privacy-policy" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">Product Privacy Policy</a> &bull;<a href="https://fusionauth.io/cookie-policy" class="hover:duration-200 hover:ease-in hover:text-indigo-500 hover:transition-colors mx-2">Cookie Policy</a></span>
                 </div>
             </div>
