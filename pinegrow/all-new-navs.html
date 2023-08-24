@@ -8,10 +8,143 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
     </head>
     <body class="antialiased">
-        <nav class="bg-slate-900 block border-b border-slate-700 border-solid h-auto sticky text-left top-0 z-50 md:bg-slate-900 lg:mb-72 xl:shadow-lg" id="updated">
+        <nav class="bg-slate-900 block border-b border-slate-700 border-solid h-auto sticky text-left top-0 z-50 md:bg-slate-900 lg:mb-96 xl:shadow-lg" id="updated">
             <div class="flex justify-between max-w-8xl mx-auto px-4 py-2 lg:container">
                 <!-- Logo -->
-                <div class="flex place-items-center"><a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-10"> </a><span class="font-light text-2xl text-slate-500">/</span><a href="" class="ease-in font-bold hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors"><span>Blog</span></a>
+                <div class="flex place-items-center">
+                    <a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-10"> </a>
+                    <span class="font-light text-2xl text-slate-500">/</span>
+                    <a href="" class="ease-in font-bold hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors"><span>Blog</span></a>
+                </div>
+                <div class="flex items-center lg:hidden">
+                    <!-- Mobile menu button --><a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-6">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/>
+                            </g>
+                        </svg></a>
+                    <button type="button" class="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white hover:bg-gray-700 hover:text-white inline-flex items-center justify-center p-2 rounded-md text-gray-400" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only">Open main menu</span>
+                        <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" class="text-white"/>
+                        </svg>
+                        <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Menu -->
+                <div class="absolute bg-white dark:bg-slate-900 h-screen hidden left-0 lg:bg-transparent lg:dark:bg-transparent lg:flex lg:h-auto lg:items-center lg:ml-auto lg:p-0 lg:static p-6 right-0 top-0">
+                    <div class="inline-block relative lg:mx-3">
+                        <!--
+    Dropdown menu, show/hide based on menu state.
+
+    Entering: "transition ease-out duration-100"
+      From: "transform opacity-0 scale-95"
+      To: "transform opacity-100 scale-100"
+    Leaving: "transition ease-in duration-75"
+      From: "transform opacity-100 scale-100"
+      To: "transform opacity-0 scale-95"
+  -->
+                        <div class="mb-1">
+                            <button type="button" class="font-medium gap-x-1.5 group hover:text-indigo-500 inline-flex items-center text-white" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                <p class="ease-in font-Inter font-bold group-hover:text-indigo-500 text-sm">Blog Categories</p>
+                                <svg class="-mr-1 group-hover:text-indigo-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="absolute bg-white focus:outline-none mt-2 origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg top-8 w-56 z-10" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                            <div class="py-1" role="none">
+                                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --><a href="/docs/v1/tech/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Tutorials</a><a href="/blog/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Product Updates</a><a href="/dev-tools/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Comparison</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Community</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Education</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">News</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Tech Docs</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inline-block relative lg:mx-3">
+                        <!--
+    Dropdown menu, show/hide based on menu state.
+
+    Entering: "transition ease-out duration-100"
+      From: "transform opacity-0 scale-95"
+      To: "transform opacity-100 scale-100"
+    Leaving: "transition ease-in duration-75"
+      From: "transform opacity-100 scale-100"
+      To: "transform opacity-0 scale-95"
+  -->
+                        <div class="mb-1">
+                            <button type="button" class="font-medium gap-x-1.5 group hover:text-indigo-500 inline-flex items-center text-white" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                <p class="ease-in font-Inter font-bold group-hover:text-indigo-500 text-sm">More</p>
+                                <svg class="-mr-1 group-hover:text-indigo-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="absolute bg-white focus:outline-none hidden mt-2 origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg top-8 w-56 z-10 lg:block" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                            <div class="py-1" role="none">
+                                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                                <a href="/docs/v1/tech/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Quickstarts</a>
+                                <a href="/blog/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">SDKs</a>
+                                <a href="/dev-tools/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Downloads</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Docs</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">API Docs</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Release Notes</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Articles</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Developer Tools</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-slate-600 h-[30px] inline-block min-h-[1em] mx-3 self-stretch w-0.5"></div><a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-5 lg:w-6">
+                                <g>
+                                    <path fill="none" d="M0 0h24v24H0z"/>
+                                    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/>
+                                </g>
+                            </svg></a>
+                        <div class="dark:hover:text-indigo-500 ease-in font-bold hover:text-indigo-600 mx-3 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="https://account.fusionauth.io/account/" class="lg:font-Inter lg:font-bold lg:text-sm">Login</a>
+                        </div>
+                        <a href="https://fusionauth.io/contact"><button class="bg-Orange-500 bg-orange-500 font-extrabold hover:bg-Orange-600 hover:bg-orange-600 ml-3 px-3 py-2 rounded text-white text-xs tracking-tighter transition-colors uppercase">Talk to an Expert</button></a>
+                    </div>
+                </div>
+                <!-- Search button -->
+                <!-- Mobile nav button (data attributes control the nav to open) -->
+            </div>
+            <div class="block shadow-md md:shadow-md lg:hidden" id="mobile-menu">
+                <p class="block font-semibold px-3 py-2 text-lg text-white">Blog Categories</p>
+                <div class="group-hover:duration-200 p-2 space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <div class="mb-5 ml-2"><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Tutorials</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Product Updates</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Comparison</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Community</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Education</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">News</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Tech Docs</a>
+                    </div>
+                </div>
+                <p class="block font-semibold pb-2 px-3 text-lg text-white">More</p>
+                <div class="group-hover:duration-200 p-2 shadow-2xl space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <div class="mb-5 ml-2"><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Quickstarts</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">SDKs</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Downloads</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Docs</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">API Docs</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Release Notes</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Articles</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Developer Tools</a>
+                    </div>
+                    <hr class="border-slate-700 border-t-2 h-px"/>
+                    <div>
+                        <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Talk To An Expert</a>
+                        <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="bg-slate-900 block border-b border-slate-700 border-solid h-auto sticky text-left top-0 z-50 md:bg-slate-900 lg:mb-96 xl:shadow-lg" id="updated">
+            <div class="flex justify-between max-w-8xl mx-auto px-4 py-2 lg:container">
+                <!-- Logo -->
+                <div class="flex place-items-center"><a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-10"> </a><span class="font-light text-2xl text-slate-500">/</span><a href="" class="ease-in font-bold hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors"><span>Articles</span></a>
                 </div>
                 <div class="flex items-center lg:hidden">
                     <!-- Mobile menu button -->
@@ -56,7 +189,7 @@
   -->
                         <div class="mb-1">
                             <button type="button" class="font-medium gap-x-1.5 group hover:text-indigo-500 inline-flex items-center text-white" id="menu-button" aria-expanded="true" aria-haspopup="true">
-                                <p class="ease-in font-Inter font-bold group-hover:text-indigo-500 text-sm">Blog Categories</p>
+                                <p class="ease-in font-Inter font-bold group-hover:text-indigo-500 text-sm">Article Categories</p>
                                 <svg class="-mr-1 group-hover:text-indigo-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                     <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
                                 </svg>
@@ -65,9 +198,10 @@
                         <div class="absolute bg-white focus:outline-none mt-2 origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg top-8 w-56 z-10" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                             <div class="py-1" role="none">
                                 <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                                <a href="/docs/v1/tech/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Tutorials</a>
-                                <a href="/blog/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Product Updates</a>
-                                <a href="/dev-tools/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Comparison</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Community</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Education</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">News</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Tech Docs</a>
+                                <a href="/docs/v1/tech/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Authentication</a>
+                                <a href="/blog/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Login &amp; Auth Workflows</a>
+                                <a href="/dev-tools/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">CIAM</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Gaming &amp; Entertainment</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Identity Basics</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">OAuth</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Security</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Tokens</a>
                             </div>
                         </div>
                     </div>
@@ -90,13 +224,13 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="absolute bg-white focus:outline-none hidden mt-2 origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg top-8 w-56 z-10" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                        <div class="absolute bg-white focus:outline-none hidden mt-2 origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg top-8 w-56 z-10 lg:block" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                             <div class="py-1" role="none">
                                 <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --><a href="/docs/v1/tech/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Quickstarts</a><a href="/blog/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">SDKs</a><a href="/dev-tools/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Downloads</a>
                                 <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Docs</a>
                                 <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">API Docs</a>
-                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Release Notes</a>
-                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Articles</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Developer Tools</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Release Notes</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Developer Tools</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Blog</a>
                             </div>
                         </div>
                     </div>
@@ -123,19 +257,21 @@
                 <!-- Mobile nav button (data attributes control the nav to open) -->
             </div>
             <div class="block shadow-md md:shadow-md lg:hidden" id="mobile-menu">
-                <p class="block font-semibold px-3 py-2 text-lg text-white">Blog Categories</p>
+                <p class="block font-semibold px-3 py-2 text-lg text-white">Article Categories</p>
                 <div class="group-hover:duration-200 p-2 space-y-1">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                     <div class="mb-5 ml-2">
-                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Tutorials</a>
-                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Features</a>
-                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Comparison</a>
-                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Community</a>
-                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Articles</a>
-                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Announcement</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Authentication</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Login &amp; Auth Workflows</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">CIAM</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Gaming Entertainment</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Identity Basics</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">OAuth</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Security</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Tokens</a>
                     </div>
                 </div>
-                <p class="block font-semibold pb-2 px-3 text-lg text-white">Other Areas</p>
+                <p class="block font-semibold pb-2 px-3 text-lg text-white">More</p>
                 <div class="group-hover:duration-200 p-2 shadow-2xl space-y-1">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                     <div class="mb-5 ml-2">
@@ -144,7 +280,8 @@
                         <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Downloads</a>
                         <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Downloads</a>
                         <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Docs</a>
-                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">API Docs</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Release Notes</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Articles</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Developer Tools</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">API Docs</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Release Notes</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Developer Tools</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Blog</a>
                     </div>
                     <hr class="border-slate-700 border-t-2 h-px"/>
                     <div><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Talk To An Expert</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Login</a>
@@ -152,14 +289,16 @@
                 </div>
             </div>
         </nav>
-        <nav class="bg-slate-900 border-b border-slate-700 border-solid h-auto shadow-md sticky text-left top-0 z-50 lg:hidden lg:mb-48" id="updated">
-            <div class="flex items-center justify-between max-w-8xl mx-auto px-4 py-2 lg:container">
+        <nav class="bg-slate-900 block border-b border-slate-700 border-solid h-auto sticky text-left top-0 z-50 md:bg-slate-900 lg:mb-96 xl:shadow-lg" id="updated">
+            <div class="flex justify-between max-w-8xl mx-auto px-4 py-2 lg:container">
                 <!-- Logo -->
-                <div class="flex place-items-center"><a href="https://fusionauth.io/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_purple_orange.svg" alt="Logo" class="dark:hidden h-10 hidden"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-10 hidden"> </a><span class="font-light text-2xl text-slate-500">/</span><a class="ease-in font-bold hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors" href="https://fusionauth.io/docs/"><span>Docs</span></a>
+                <div class="flex place-items-center">
+                    <a href="/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-10"> </a>
+                    <span class="font-light text-2xl text-slate-500">/</span>
+                    <a href="" class="ease-in font-bold hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors"><span>Docs</span></a>
                 </div>
                 <div class="flex items-center lg:hidden">
-                    <!-- Mobile menu button -->
-                    <a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-6">
+                    <!-- Mobile menu button --><a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-6">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"/>
                                 <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/>
@@ -186,15 +325,35 @@
                 </div>
                 <!-- Menu -->
                 <div class="absolute bg-white dark:bg-slate-900 h-screen hidden left-0 lg:bg-transparent lg:dark:bg-transparent lg:flex lg:h-auto lg:items-center lg:ml-auto lg:p-0 lg:static p-6 right-0 top-0">
-                    <ul class="space-y-6 lg:flex lg:items-center lg:space-y-0">
-                        <li class="ease-in font-Inter font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/quickstarts/">Downloads</a>
-                        </li>
-                        <li class="ease-in font-Inter font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm">
-                            <a href="/docs/quickstarts/">SDKs</a>
-                        </li>
-                        <li class="ease-in font-Inter font-bold hover:text-indigo-500 text-lg text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/v1/tech/apis/">API Docs</a>
-                        </li>
-                    </ul>
+                    <div class="inline-block relative lg:mx-3">
+                        <!--
+    Dropdown menu, show/hide based on menu state.
+
+    Entering: "transition ease-out duration-100"
+      From: "transform opacity-0 scale-95"
+      To: "transform opacity-100 scale-100"
+    Leaving: "transition ease-in duration-75"
+      From: "transform opacity-100 scale-100"
+      To: "transform opacity-0 scale-95"
+  -->
+                        <div class="mb-1">
+                            <button type="button" class="font-medium gap-x-1.5 group hover:text-indigo-500 inline-flex items-center text-white" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                <p class="ease-in font-Inter font-bold group-hover:text-indigo-500 text-sm">Doc Categories</p>
+                                <svg class="-mr-1 group-hover:text-indigo-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="absolute bg-white focus:outline-none mt-2 origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg top-8 w-56 z-10" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                            <div class="py-1" role="none">
+                                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --><a href="/docs/v1/tech/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">?</a><a href="/blog/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">?</a><a href="/dev-tools/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">?</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">?</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">?</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">?</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">?</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="inline-block relative lg:mx-3">
                         <!--
     Dropdown menu, show/hide based on menu state.
@@ -214,10 +373,14 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="absolute bg-white focus:outline-none mt-2 origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg top-8 w-56 z-10" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                        <div class="absolute bg-white focus:outline-none hidden mt-2 origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg top-8 w-56 z-10 lg:block" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                             <div class="py-1" role="none">
-                                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --><a href="/docs/v1/tech/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Technical Articles</a><a href="/blog/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Blog</a><a href="/dev-tools/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Developer Tools</a>
-                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Release Notes</a>
+                                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                                <a href="/docs/v1/tech/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Quickstarts</a>
+                                <a href="/blog/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">SDKs</a>
+                                <a href="/dev-tools/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Downloads</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">API Docs</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Release Notes</a><a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Articles</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Developer Tools</a>
+                                <a href="/docs/v1/tech/release-notes" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Blog</a>
                             </div>
                         </div>
                     </div>
@@ -241,109 +404,27 @@
                 <!-- Search button -->
                 <!-- Mobile nav button (data attributes control the nav to open) -->
             </div>
-            <div class="block lg:hidden" id="mobile-menu">
-                <div class="group-hover:duration-200 pb-3 pt-2 px-2 shadow-2xl space-y-1">
-                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Downloads</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">SDKs</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">API Docs</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Tech Docs</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Blog</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Developer Tools</a><a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors pb-4 pt-2 px-3 rounded-md text-base text-white">Release Notes</a>
-                    <hr class="border-slate-700 border-t-2 h-px my-12"/>
-                    <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors pb-2 pt-4 px-3 rounded-md text-base text-white">Login</a>
-                    <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Talk To An Expert</a>
-                </div>
-            </div>
-        </nav>
-        <nav class="bg-slate-900 border-b border-slate-700 border-solid h-auto hidden shadow-sm sticky text-left top-0 z-50">
-            <div class="flex items-center justify-between max-w-8xl mx-auto px-4 py-2 lg:container">
-                <!-- Logo -->
-                <div class="flex place-items-center"><a href="https://fusionauth.io/" class="ease-in mr-1 opacity-100 hover:opacity-70 transition-opacity"> <img src="../assets/logo/fa_logo_purple_orange.svg" alt="Logo" class="dark:hidden h-10"> <img src="../assets/logo/fa_logo_white_orange.svg" alt="Logo" class="dark:inline h-10 hidden"> </a><span class="font-light text-2xl text-slate-500">/</span><a class="ease-in font-bold hover:text-slate-400 ml-2 text-2xl text-white tracking-tight transition-colors" href="https://fusionauth.io/docs/"><span>Articles</span></a>
-                </div>
-                <div class="flex items-center lg:hidden">
-                    <!-- Mobile menu button -->
-                    <a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-6">
-                            <g>
-                                <path fill="none" d="M0 0h24v24H0z"/>
-                                <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/>
-                            </g>
-                        </svg></a>
-                    <button type="button" class="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white hover:bg-gray-700 hover:text-white inline-flex items-center justify-center p-2 rounded-md text-gray-400" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only">Open main menu</span>
-                        <!--
-            Icon when menu is closed.
-
-            Menu open: "hidden", Menu closed: "block"
-          -->
-                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" class="text-white"/>
-                        </svg>
-                        <!--
-            Icon when menu is open.
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
-                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                <!-- Menu -->
-                <div class="absolute bg-white dark:bg-slate-900 h-screen hidden left-0 lg:bg-transparent lg:dark:bg-transparent lg:flex lg:h-auto lg:items-center lg:ml-auto lg:p-0 lg:static p-6 right-0 top-0">
-                    <ul class="space-y-6 lg:flex lg:items-center lg:space-y-0">
-                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/quickstarts/">Docs</a>
-                        </li>
-                        <li class="ease-in font-bold hover:text-indigo-500 text-base text-white transition-colors lg:mx-3 lg:text-sm">
-                            <a href="/docs/quickstarts/">Install FusionAuth</a>
-                        </li>
-                        <li class="ease-in font-bold hover:text-indigo-500 text-lg text-white transition-colors lg:mx-3 lg:text-sm"><a href="/docs/v1/tech/apis/">SDKs</a>
-                        </li>
-                    </ul>
-                    <div class="inline-block relative lg:mx-3">
-                        <!--
-    Dropdown menu, show/hide based on menu state.
-
-    Entering: "transition ease-out duration-100"
-      From: "transform opacity-0 scale-95"
-      To: "transform opacity-100 scale-100"
-    Leaving: "transition ease-in duration-75"
-      From: "transform opacity-100 scale-100"
-      To: "transform opacity-0 scale-95"
-  -->
-                        <div class="mb-1">
-                            <button type="button" class="font-medium gap-x-1.5 group hover:text-indigo-500 inline-flex items-center text-white" id="menu-button" aria-expanded="true" aria-haspopup="true">
-                                <p class="ease-in font-Inter font-bold group-hover:text-indigo-500 text-sm">More</p>
-                                <svg class="-mr-1 group-hover:text-indigo-500 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="absolute bg-white focus:outline-none mt-2 origin-top-right right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg top-8 w-56 z-10" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                            <div class="py-1 w-56" role="none">
-                                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --><a href="/docs/v1/tech/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Blog</a><a href="/blog/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Developer Tools</a><a href="/dev-tools/" class="block font-semibold hover:text-indigo-600 px-4 py-2 text-slate-700 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Release Notes</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="bg-slate-500 h-[30px] inline-block min-h-[1em] mx-3 self-stretch w-0.5"></div><a href="" class="ease-in mx-3 transition-all"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-5 lg:w-5" fill="currentColor">
-                                <g>
-                                    <path fill="none" d="M0 0h24v24H0z"/>
-                                    <path fill-rule="nonzero" d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/>
-                                </g>
-                            </svg></a><a href="" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="2em" height="2em" class="ease-in hover:text-indigo-500 text-white transition-colors w-5 lg:w-6">
-                                <g>
-                                    <path fill="none" d="M0 0h24v24H0z"/>
-                                    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/>
-                                </g>
-                            </svg></a>
-                        <div class="dark:hover:text-indigo-500 ease-in font-bold hover:text-indigo-600 mx-3 text-base text-white transition-colors lg:mx-3 lg:text-sm"><a href="https://account.fusionauth.io/account/">Login</a>
-                        </div>
-                        <a href="https://fusionauth.io/contact"><button class="bg-orange-500 font-extrabold hover:bg-orange-600 ml-3 px-3 py-2 rounded text-white text-xs tracking-tighter transition-colors uppercase">Talk to an Expert</button></a>
+            <div class="block shadow-md md:shadow-md lg:hidden" id="mobile-menu">
+                <p class="block font-semibold px-3 py-2 text-lg text-white">Doc Categories</p>
+                <div class="group-hover:duration-200 p-2 space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <div class="mb-5 ml-2"><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">?</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">?</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">?</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">?</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">?</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">?</a>
                     </div>
                 </div>
-                <!-- Search button -->
-                <!-- Mobile nav button (data attributes control the nav to open) -->
-            </div>
-            <div class="block lg:hidden" id="mobile-menu">
-                <div class="group-hover:duration-200 pb-3 pt-2 px-2 shadow-2xl space-y-1">
-                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Docs</a><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Install FusionAuth</a><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">SDKs &amp; Client Libraries</a><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Blog</a><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Developer Tools</a><a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Release Notes</a>
-                    <hr class="bg-neutral-100 border-t-0 dark:opacity-20 h-px my-12 opacity-100"/>
-                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors pb-2 pt-4 px-3 rounded-md text-base text-white">Login</a>
-                    <a href="#" class="block font-medium hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Talk To An Expert</a>
+                <p class="block font-semibold pb-2 px-3 text-lg text-white">More</p>
+                <div class="group-hover:duration-200 p-2 shadow-2xl space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <div class="mb-5 ml-2"><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Quickstarts</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">SDKs</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Downloads</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Downloads</a><a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">API Docs</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Release Notes</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Articles</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Developer Tools</a>
+                        <a href="#" class="block border-l-2 border-slate-700 border-solid font-semibold hover:border-indigo-500 hover:border-l-2 hover:border-solid hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 relative text-base text-white">Blog</a>
+                    </div>
+                    <hr class="border-slate-700 border-t-2 h-px"/>
+                    <div>
+                        <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Talk To An Expert</a>
+                        <a href="#" class="block font-semibold hover:ease-linear hover:text-indigo-500 hover:transition-colors px-3 py-2 rounded-md text-base text-white">Login</a>
+                    </div>
                 </div>
             </div>
         </nav>
