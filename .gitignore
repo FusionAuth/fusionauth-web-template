@@ -4,3 +4,4 @@ dist
 node_modules
 *.iws
 .DS_Store
+.idea
